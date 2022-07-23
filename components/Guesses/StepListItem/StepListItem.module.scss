@@ -1,0 +1,21 @@
+.item {
+    background-color: var(--color-lightest-grey);
+    border-radius: 4px;
+    display: inline-block;
+    margin: var(--spacing-quarter);
+    padding: var(--spacing-quarter) var(--spacing-third);
+
+    &.selected {
+        background-color: var(--color-light-grey);
+
+        button {
+            font-weight: var(--font-weight-sans-bold);
+        }
+    }
+
+    button {
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-sans-medium);
+        padding: 0;
+    }
+}
