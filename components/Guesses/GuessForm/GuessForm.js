@@ -2,6 +2,7 @@ import { Form, Formik } from 'formik'
 import { useGuessContext } from '@lib/use-guess-context'
 
 import Select from './Select'
+import styles from './GuessForm.module.scss'
 
 export default function GuessForm() {
     const {
@@ -60,8 +61,14 @@ export default function GuessForm() {
         <Formik initialValues={initialValues} onSubmit={handleSubmit}>
             {() => (
                 <Form>
-                    <Select options={options} />
-                    <button type='submit'>Submit</button>
+                    <div className={styles.container}>
+                        <div className={styles.select}>
+                            <Select options={options} />
+                        </div>
+                        <button className={styles.submit} type='submit'>
+                            Submit
+                        </button>
+                    </div>
                 </Form>
             )}
         </Formik>

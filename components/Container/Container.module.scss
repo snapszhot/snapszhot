@@ -1,12 +1,29 @@
-.wrapper {
-    padding: var(--spacing-single);
-}
-
 .container {
-    background-color: var(--color-white);
-    border-radius: 8px;
     margin: 0 auto;
     max-width: 650px;
     padding: var(--spacing-single);
     width: 100%;
+}
+
+.pageTitleWrapper {
+    margin-bottom: var(--spacing-single);
+    padding-bottom: var(--spacing-half);
+}
+
+.pageTitle {
+    font-weight: var(--font-weight-sans-bold);
+    text-decoration: underline;
+}
+
+.day {
+    color: var(--color-dark-grey);
+    display: block;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-sans-medium);
+    text-transform: uppercase;
+}
+
+.hintTitle {
+    display: block;
+    font-size: var(--font-size-medium-large);
 }

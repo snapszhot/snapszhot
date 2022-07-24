@@ -11,14 +11,8 @@ export default function Guesses() {
     return (
         <div>
             <StepList />
-            {guessNum < 6 ? (
-                <>
-                    <GuessForm />
-                    <GuessList />
-                </>
-            ) : (
-                <Results />
-            )}
+            {guessNum < 6 ? <GuessForm /> : <Results />}
+            <GuessList />
         </div>
     )
 }

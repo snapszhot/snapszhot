@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+}
+
+.select {
+    flex-grow: 1;
+    margin-right: var(--spacing-half);
+}
+
+.submit {
+    background-color: var(--color-dark-grey);
+    border-radius: 4px;
+    color: var(--color-white);
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    padding: var(--spacing-sixth) var(--spacing-half);
+    transition: all 300ms ease;
+
+    &:hover {
+        background-color: var(--color-not-black);
+    }
+}

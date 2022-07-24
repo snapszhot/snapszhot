@@ -1,6 +1,7 @@
 import { useGuessContext } from '@lib/use-guess-context'
 
 import StepListItem from '../StepListItem'
+import styles from './StepList.module.scss'
 
 export default function StepList() {
     const { guessNum } = useGuessContext()
@@ -10,5 +11,5 @@ export default function StepList() {
         stepsToShow.push(<StepListItem guess={i + 1} key={i} />)
     }
 
-    return <ul>{stepsToShow}</ul>
+    return <ul className={styles.container}>{stepsToShow}</ul>
 }

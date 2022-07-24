@@ -3,21 +3,19 @@ import styles from './Container.module.scss'
 
 export default function Container({ children, day, subtitle }) {
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.container}>
-                <header>
-                    <div>
-                        SNAPSЖOT
-                        <button>info</button>
-                    </div>
-                    <div>
-                        <h1>
-                            Day {day}: {subtitle}
-                        </h1>
-                    </div>
-                </header>
-                <main>{children}</main>
-            </div>
+        <div className={styles.container}>
+            <header>
+                <div className={styles.pageTitleWrapper}>
+                    <div className={styles.pageTitle}>SNAPSЖOT</div>
+                </div>
+                <div>
+                    <h1>
+                        <span className={styles.day}>Day {day}</span>
+                        <span className={styles.hintTitle}>“{subtitle}”</span>
+                    </h1>
+                </div>
+            </header>
+            <main>{children}</main>
         </div>
     )
 }

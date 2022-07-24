@@ -1,33 +1,20 @@
-import { useState } from 'react'
 import { useGuessContext } from '@lib/use-guess-context'
-import GuessList from '../GuessList'
+
+import styles from './Results.module.scss'
 
 export default function Results() {
-    const [showGuesses, setShowGuesses] = useState(false)
     const { correct } = useGuessContext()
 
-    const handleClick = () => setShowGuesses(!showGuesses)
-
-    if (correct) {
-        return (
-            <div>
-                <h2>Good work!</h2>
-                <button onClick={handleClick} type='button'>
-                    Show Guesses
-                </button>
-                {showGuesses && <GuessList />}
-            </div>
-        )
-    }
-
     return (
-        <div>
-            <h2>The correct answer was:</h2>
-            <div>Double Indemnity</div>
-            <button onClick={handleClick} type='button'>
-                Show Guesses
-            </button>
-            {showGuesses && <GuessList />}
+        <div className={styles.container}>
+            {correct ? (
+                <h2 className={styles.correctTitle}>Good work!</h2>
+            ) : (
+                <>
+                    <h2 className={styles.shoulda}>The correct answer was:</h2>
+                    <div className={styles.correctTitle}>Double Indemnity</div>
+                </>
+            )}
         </div>
     )
 }
