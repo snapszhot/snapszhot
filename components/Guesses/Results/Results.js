@@ -1,5 +1,5 @@
 import { useGuessContext } from '@lib/use-guess-context'
-
+import Countdown from './Countdown'
 import styles from './Results.module.scss'
 
 export default function Results() {
@@ -15,6 +15,7 @@ export default function Results() {
                     <div className={styles.correctTitle}>Double Indemnity</div>
                 </>
             )}
+            <Countdown />
         </div>
     )
 }

@@ -1,0 +1,14 @@
+.container {
+    margin-top: var(--spacing-single);
+}
+
+.title {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-small);
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.time {
+    font-size: var(--font-size-medium);
+}

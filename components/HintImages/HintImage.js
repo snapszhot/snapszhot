@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import Image from 'next/image'
 import { useGuessContext } from '@lib/use-guess-context'
 
 export default function HintImage({ alt, index, url }) {
@@ -11,7 +12,7 @@ export default function HintImage({ alt, index, url }) {
         (isSelectedStep && hasBeenGuessed) || (!isSelectedStep && isLast)
 
     if (isDisplayed) {
-        return <img alt={alt} src={url} />
+        return <Image alt={alt} src={url} width='426' height='320' />
     }
 
     return null

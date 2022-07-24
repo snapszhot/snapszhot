@@ -1,7 +1,7 @@
 import { Form, Formik } from 'formik'
 import { useGuessContext } from '@lib/use-guess-context'
 
-import Select from './Select'
+import InputField from './InputField'
 import styles from './GuessForm.module.scss'
 
 export default function GuessForm() {
@@ -48,13 +48,45 @@ export default function GuessForm() {
     }
 
     const options = [
-        { value: 'The Sound of Music', label: 'The Sound of Music' },
-        { value: 'Le Bonheur', label: 'Le Bonheur' },
-        { value: 'Seven Samurai', label: 'Seven Samurai' },
-        { value: 'Le Samouraï', label: 'Le Samouraï' },
-        { value: 'Double Indemnity', label: 'Double Indemnity' },
-        { value: '1984', label: '1984' },
-        { value: 'Le doulos', label: 'Le doulos' },
+        {
+            movie: '1984',
+            director: 'Michael Radford',
+            releaseYear: '1984',
+        },
+        { movie: 'Le Bonheur', director: 'Agnès Varda', releaseYear: '1965' },
+        {
+            movie: 'Double Indemnity',
+            director: 'Billy Wilder',
+            releaseYear: '1944',
+        },
+        {
+            movie: 'Le doulos',
+            director: 'Jean-Pierre Melville',
+            releaseYear: '1962',
+        },
+        { movie: 'Rango', director: 'Gore Verbinski', releaseYear: '2011' },
+        { movie: 'Rashomon', director: 'Akira Kurosawa', releaseYear: '1950' },
+        {
+            movie: 'Le Samouraï',
+            director: 'Jean-Pierre Melville',
+            releaseYear: '1967',
+        },
+        {
+            movie: 'Seven Samurai',
+            director: 'Akira Kurosawa',
+            releaseYear: '1954',
+        },
+        {
+            movie: 'The Social Network',
+            director: 'David Fincher',
+            releaseYear: '2010',
+        },
+        {
+            movie: 'The Sound of Music',
+            director: 'Robert Wise',
+            releaseYear: '1965',
+        },
+        { movie: 'Summertime', director: 'David Lean', releaseYear: '1955' },
     ]
 
     return (
@@ -62,8 +94,8 @@ export default function GuessForm() {
             {() => (
                 <Form>
                     <div className={styles.container}>
-                        <div className={styles.select}>
-                            <Select options={options} />
+                        <div className={styles.inputField}>
+                            <InputField name='guess' options={options} />
                         </div>
                         <button className={styles.submit} type='submit'>
                             Submit

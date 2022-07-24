@@ -1,6 +1,6 @@
 import { useGuessContext } from '@lib/use-guess-context'
 
-import StepListItem from '../StepListItem'
+import StepListItem from './StepListItem'
 import styles from './StepList.module.scss'
 
 export default function StepList() {
