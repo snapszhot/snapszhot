@@ -4,13 +4,13 @@ import styles from './Movie.module.scss'
 export default function Movie({ director, movie, originalTitle, releaseYear }) {
     return (
         <>
-            <span className={styles.title}>
-                {movie}
+            <span className={styles.titleWrapper}>
+                <span className={styles.title}>{movie}</span>
                 {originalTitle && (
                     <span className={styles.origTitle}>({originalTitle})</span>
                 )}
+                <span className={styles.year}>{releaseYear}</span>
             </span>
-            <span className={styles.year}>{releaseYear}</span>
             <span className={styles.director}>{director}</span>
         </>
     )

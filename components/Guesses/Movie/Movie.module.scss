@@ -1,8 +1,14 @@
-.title {
+.titleWrapper {
+    align-items: baseline;
     color: var(--color-not-black);
+    display: inline-flex;
+    flex-wrap: wrap;
     font-size: var(--font-size-medium-small);
     font-weight: var(--font-weight-sans-bold);
-    margin-right: var(--spacing-third);
+}
+
+.title {
+    margin-right: var(--spacing-sixth);
 }
 
 .director,
@@ -17,9 +23,10 @@
 }
 
 .origTitle {
-    margin-left: var(--spacing-sixth);
+    margin-right: var(--spacing-third);
 }
 
 .year {
+    font-weight: var(--font-weight-sans-normal);
     margin-right: var(--spacing-third);
 }
