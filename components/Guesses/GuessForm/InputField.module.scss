@@ -1,7 +1,10 @@
 @import 'inputs';
+@import 'mixins';
 
 .container {
-    position: relative;
+    @include breakpoint('small') {
+        position: relative;
+    }
 }
 
 .input {
