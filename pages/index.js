@@ -43,5 +43,6 @@ export async function getStaticProps() {
             images: post.images,
             subtitle: post.subtitle,
         },
+        revalidate: 1,
     }
 }
