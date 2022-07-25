@@ -1,53 +1,44 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
+import { SWRConfig } from 'swr'
+
+import formatPrismicPost from '@lib/format-prismic-post'
 import getPrefills from '@lib/get-prefills'
 import { queryLatestMovie } from '@lib/prismic'
-import { GuessContextProvider } from '@lib/use-guess-context'
 
-import { Container, Guesses, HintImages } from '@components'
+import { Game } from '@components'
 
-export default function Home({ answer, day, images, prefills, subtitle }) {
+export default function Home({ fallback, prefills }) {
     return (
-        <GuessContextProvider answer={answer} day={day}>
+        <SWRConfig value={{ fallback }}>
             <Head>
                 <title>
                     SNAPSЖOT: swo17’s attempt at a more eclectic version of
                     Framed
                 </title>
             </Head>
-            <Container day={day} subtitle={subtitle}>
-                <HintImages images={images} />
-                <Guesses prefills={prefills} />
-            </Container>
-        </GuessContextProvider>
+            <Game prefills={prefills} />
+        </SWRConfig>
     )
 }
 
 Home.propTypes = {
-    answer: PropTypes.object,
-    day: PropTypes.number,
-    images: PropTypes.array,
+    fallback: PropTypes.object,
     prefills: PropTypes.array,
-    subtitle: PropTypes.string,
 }
 
 export async function getStaticProps() {
     const post = await queryLatestMovie()
     const prefills = await getPrefills()
+    const fallback = formatPrismicPost(post)
 
     return {
         props: {
-            answer: {
-                movie: post.title,
-                originalTitle: post.original_language_title,
-                director: post.director,
-                releaseYear: post.release_year,
+            fallback: {
+                '/': fallback,
             },
-            day: post.day,
-            images: post.images,
             prefills,
-            subtitle: post.subtitle,
         },
-        revalidate: 1,
+        revalidate: 60,
     }
 }
