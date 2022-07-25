@@ -7,7 +7,7 @@ import styles from './InputField.module.scss'
 
 export default function InputField({ name, options }) {
     const [showPrefill, setShowPrefill] = useState(false)
-    const { setFieldValue, setValues } = useFormikContext()
+    const { setValues } = useFormikContext()
     const [field] = useField({
         id: name,
         name: name,
@@ -17,7 +17,12 @@ export default function InputField({ name, options }) {
     const handleChange = event => {
         event.preventDefault()
         const { value } = event.target
-        setFieldValue('guess', value)
+        setValues({
+            guess: value,
+            director: '',
+            originalTitle: '',
+            releaseYear: '',
+        })
         setShowPrefill(value !== '')
     }
 
@@ -25,6 +30,7 @@ export default function InputField({ name, options }) {
         setValues({
             guess: item.movie,
             director: item.director,
+            originalTitle: item.originalTitle,
             releaseYear: item.releaseYear,
         })
         setShowPrefill(false)

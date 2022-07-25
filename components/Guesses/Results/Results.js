@@ -14,7 +14,8 @@ export default function Results() {
                     <h2 className={styles.shoulda}>The correct answer was</h2>
                     <div>
                         <span className={styles.correctTitle}>
-                            {answer.movie} ({answer.releaseYear})
+                            {answer.movie} ({answer.originalTitle}) (
+                            {answer.releaseYear})
                         </span>
                         <span className={styles.director}>
                             Directed by {answer.director}

@@ -2,17 +2,24 @@
     color: var(--color-not-black);
     font-size: var(--font-size-medium-small);
     font-weight: var(--font-weight-sans-bold);
-    margin-right: var(--spacing-half);
+    margin-right: var(--spacing-third);
 }
 
-.director {
-    color: var(--color-dark-grey);
-    font-size: var(--font-size-small);
-    display: block;
-}
-
+.director,
+.origTitle,
 .year {
     color: var(--color-dark-grey);
     font-size: var(--font-size-small);
-    margin-right: var(--spacing-half);
+}
+
+.director {
+    display: block;
+}
+
+.origTitle {
+    margin-left: var(--spacing-sixth);
+}
+
+.year {
+    margin-right: var(--spacing-third);
 }

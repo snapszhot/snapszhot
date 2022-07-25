@@ -10,6 +10,18 @@ const options = [
         director: 'Michael Radford',
         releaseYear: '1984',
     },
+    {
+        movie: 'Army of Shadows',
+        director: 'Jean-Pierre Melville',
+        originalTitle: 'L’Armée des ombres',
+        releaseYear: '1969',
+    },
+    {
+        movie: 'An Autumn Afternoon',
+        director: 'Yasujirō Ozu',
+        originalTitle: '秋刀魚の味',
+        releaseYear: '1962',
+    },
     { movie: 'Le Bonheur', director: 'Agnès Varda', releaseYear: '1965' },
     {
         movie: 'Double Indemnity',
@@ -29,7 +41,12 @@ const options = [
     { movie: 'Psycho', director: 'Alfred Hitchcock', releaseYear: '1960' },
     { movie: 'Psycho', director: 'Gus Van Sant', releaseYear: '1998' },
     { movie: 'Rango', director: 'Gore Verbinski', releaseYear: '2011' },
-    { movie: 'Rashomon', director: 'Akira Kurosawa', releaseYear: '1950' },
+    {
+        movie: 'Rashomon',
+        director: 'Akira Kurosawa',
+        originalTitle: '羅生門',
+        releaseYear: '1950',
+    },
     {
         movie: 'Le Samouraï',
         director: 'Jean-Pierre Melville',
@@ -38,6 +55,7 @@ const options = [
     {
         movie: 'Seven Samurai',
         director: 'Akira Kurosawa',
+        originalTitle: '七人の侍',
         releaseYear: '1954',
     },
     {
@@ -108,7 +126,12 @@ export default function GuessForm() {
 
         setGuesses([
             ...guesses,
-            { ...values, isCorrect: playerWon, movie: values.guess },
+            {
+                ...values,
+                isCorrect: playerWon,
+                movie: values.guess,
+                originalTitle: values.originalTitle,
+            },
         ])
         setCurrentGuess(numberOfGuesses)
         resetForm()

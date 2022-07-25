@@ -36,6 +36,7 @@ export async function getStaticProps() {
         props: {
             answer: {
                 movie: post.title,
+                originalTitle: post.original_language_title,
                 director: post.director,
                 releaseYear: post.release_year,
             },
