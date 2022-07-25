@@ -1,6 +1,6 @@
 {
-    "name": "framed",
-    "version": "0.1.0",
+    "name": "snapswot",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -11,7 +11,6 @@
     "dependencies": {
         "@prismicio/client": "^6.6.2",
         "@prismicio/react": "^2.4.3",
-        "axios": "^0.27.2",
         "classnames": "^2.3.1",
         "formik": "^2.2.9",
         "luxon": "^3.0.1",
