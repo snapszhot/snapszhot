@@ -1,23 +1,13 @@
 @import 'mixins';
 
 .container {
-    margin: 0 auto;
-    max-width: 650px;
-    padding: var(--spacing-single) 0 var(--spacing-triple);
     width: 100%;
-
-    @include breakpoint('small') {
-        padding: var(--spacing-single) var(--spacing-single)
-            var(--spacing-triple);
-    }
 }
 
 .header {
-    padding: 0 var(--spacing-single);
-
-    @include breakpoint('small') {
-        padding: 0;
-    }
+    margin: 0 auto;
+    max-width: 650px;
+    padding: var(--spacing-single);
 }
 
 .pageTitleWrapper {
