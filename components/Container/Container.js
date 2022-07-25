@@ -13,7 +13,7 @@ export default function Container({ children, day, subtitle }) {
 
     return (
         <div className={styles.container}>
-            <header>
+            <header className={styles.header}>
                 <div className={styles.pageTitleWrapper}>
                     <div className={styles.pageTitle}>SNAPSЖOT</div>
                     <Stats />

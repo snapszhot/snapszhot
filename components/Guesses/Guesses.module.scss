@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.body {
+    padding: 0 var(--spacing-single);
+
+    @include breakpoint('small') {
+        padding: 0;
+    }
+}
