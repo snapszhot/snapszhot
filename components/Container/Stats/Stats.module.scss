@@ -2,9 +2,12 @@
 
 .modal {
     background-color: var(--color-white);
+    border: 2px solid var(--color-light-grey);
+    border-radius: 4px;
     left: 50%;
     max-width: 95%;
     min-height: 240px;
+    outline: none;
     padding: var(--spacing-single);
     position: fixed;
     top: 50%;
@@ -12,7 +15,7 @@
     width: 100%;
 
     @include breakpoint('small') {
-        max-width: 500px;
+        max-width: 450px;
     }
 }
 

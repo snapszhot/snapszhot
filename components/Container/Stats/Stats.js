@@ -20,7 +20,11 @@ export default function Stats() {
     }
 
     const winPercentage =
-        parseFloat((stats.gamesWon / stats.gamesPlayed) * 100).toFixed(2) + '%'
+        stats.gamesPlayed !== 0
+            ? parseFloat((stats.gamesWon / stats.gamesPlayed) * 100).toFixed(
+                  2
+              ) + '%'
+            : '0%'
 
     return (
         <>
