@@ -17,16 +17,6 @@ export default function Stats() {
         overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0.25)',
         },
-        content: {
-            backgroundColor: 'var(--color-white)',
-            border: 'none',
-            borderRadius: 0,
-            bottom: 'auto',
-            left: 'calc(50% - 250px)',
-            maxWidth: 500,
-            right: 'auto',
-            width: '100%',
-        },
     }
 
     const winPercentage =
@@ -40,8 +30,9 @@ export default function Stats() {
                 </svg>
             </button>
             <Modal
-                isOpen={isOpen}
+                className={styles.modal}
                 contentLabel='Your Stats'
+                isOpen={isOpen}
                 onRequestClose={toggleModal}
                 style={modalStyles}
             >
