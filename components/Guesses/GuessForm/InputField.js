@@ -1,30 +1,32 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import { useField } from 'formik'
+import { useField, useFormikContext } from 'formik'
 
 import Prefill from './Prefill'
 import styles from './InputField.module.scss'
 
 export default function InputField({ name, options }) {
     const [showPrefill, setShowPrefill] = useState(false)
-    // eslint-disable-next-line no-unused-vars
-    const [field, meta, helpers] = useField({
+    const { setFieldValue, setValues } = useFormikContext()
+    const [field] = useField({
         id: name,
         name: name,
         type: 'text',
     })
-    const { setValue } = helpers
 
     const handleChange = event => {
         event.preventDefault()
         const { value } = event.target
-        const show = value !== ''
-        setValue(value)
-        setShowPrefill(show)
+        setFieldValue('guess', value)
+        setShowPrefill(value !== '')
     }
 
-    const handlePrefillSelect = value => {
-        setValue(value)
+    const handlePrefillSelect = item => {
+        setValues({
+            guess: item.movie,
+            director: item.director,
+            releaseYear: item.releaseYear,
+        })
         setShowPrefill(false)
     }
 

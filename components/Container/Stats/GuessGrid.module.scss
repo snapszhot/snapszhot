@@ -1,0 +1,30 @@
+.grid {
+    margin-top: var(--spacing-single);
+}
+
+.title {
+    font-size: var(--font-size-medium);
+}
+
+.gridItem {
+    align-items: center;
+    display: flex;
+    font-weight: var(--font-weight-sans-bold);
+}
+
+.guess {
+    flex-basis: 20px;
+    font-feature-settings: 'tnum';
+    font-variant-numeric: tabular-nums;
+    margin-right: var(--spacing-sixth);
+}
+
+.gridItemSpan {
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+    display: inline-block;
+    padding: var(--spacing-sixth);
+    margin: var(--spacing-sixth) 0;
+    min-width: 20px;
+    text-align: center;
+}

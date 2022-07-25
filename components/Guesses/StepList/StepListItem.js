@@ -3,21 +3,21 @@ import { useGuessContext } from '@lib/use-guess-context'
 import cn from 'classnames'
 import styles from './StepListItem.module.scss'
 
-export default function StepListItem({ guess }) {
-    const { selectedStep, setSelectedStep } = useGuessContext()
-    const handleClick = () => setSelectedStep(guess)
+export default function StepListItem({ imageNumber }) {
+    const { currentImage, setCurrentImage } = useGuessContext()
+    const handleClick = () => setCurrentImage(imageNumber)
 
     const className = cn(styles.item, {
-        [styles.selected]: selectedStep === guess,
+        [styles.selected]: currentImage === imageNumber,
     })
 
     return (
         <li className={className}>
-            <button onClick={handleClick}>{guess}</button>
+            <button onClick={handleClick}>{imageNumber}</button>
         </li>
     )
 }
 
 StepListItem.propTypes = {
-    guess: PropTypes.number,
+    imageNumber: PropTypes.number,
 }

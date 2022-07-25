@@ -12,6 +12,13 @@
 }
 
 .correctTitle {
+    display: block;
     font-size: var(--font-size-medium-large);
     font-weight: var(--font-weight-sans-bold);
+}
+
+.director {
+    color: var(--color-dark-grey);
+    display: block;
+    font-size: var(--font-size-base);
 }

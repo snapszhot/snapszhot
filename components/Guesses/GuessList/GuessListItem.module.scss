@@ -5,10 +5,10 @@
     display: flex;
     font-size: var(--font-size-medium-small);
     margin: var(--spacing-third) 0;
-    height: var(--spacing-double);
+    min-height: var(--spacing-double);
     padding: var(--spacing-sixth) var(--spacing-third);
 }
 
 .icon {
-    margin-right: var(--spacing-third);
+    margin-right: var(--spacing-half);
 }

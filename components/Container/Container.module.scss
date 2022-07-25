@@ -6,6 +6,8 @@
 }
 
 .pageTitleWrapper {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: var(--spacing-single);
     padding-bottom: var(--spacing-half);
 }

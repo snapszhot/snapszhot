@@ -1,0 +1,18 @@
+.title {
+    color: var(--color-not-black);
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    margin-right: var(--spacing-half);
+}
+
+.director {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-small);
+    display: block;
+}
+
+.year {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-small);
+    margin-right: var(--spacing-half);
+}

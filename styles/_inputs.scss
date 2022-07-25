@@ -35,28 +35,4 @@
     &::placeholder {
         color: var(--color-not-black);
     }
-
-    &.errorBorder {
-        border-color: var(--color-red);
-    }
-}
-
-%disabled {
-    background-color: var(--color-lightest-grey);
-    color: var(--color-disabled);
-    cursor: not-allowed;
-
-    &:hover {
-        border-color: var(--color-light-grey);
-    }
-}
-
-%button {
-    border: 2px solid transparent;
-    border-radius: 3px;
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-sans-bold);
-    margin-bottom: var(--spacing-half);
-    padding: var(--spacing-half);
-    width: 100%;
 }

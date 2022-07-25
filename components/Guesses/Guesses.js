@@ -6,12 +6,12 @@ import Results from './Results'
 import StepList from './StepList'
 
 export default function Guesses() {
-    const { guessNum } = useGuessContext()
+    const { gameState } = useGuessContext()
 
     return (
         <div>
             <StepList />
-            {guessNum < 6 ? <GuessForm /> : <Results />}
+            {gameState === 'in-progress' ? <GuessForm /> : <Results />}
             <GuessList />
         </div>
     )

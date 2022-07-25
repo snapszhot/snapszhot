@@ -4,7 +4,7 @@ import GuessListItem from './GuessListItem'
 export default function GuessList() {
     const { guesses } = useGuessContext()
 
-    if (guesses.length < 1) {
+    if (!guesses) {
         return null
     }
 

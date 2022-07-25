@@ -1,21 +1,24 @@
 import PropTypes from 'prop-types'
+import Movie from '../Movie'
 import styles from './PrefillItem.module.scss'
 
 export default function PrefillItem({ handleClick, item }) {
-    const onClick = () => handleClick(item.movie)
+    const onClick = () => handleClick(item)
 
     return (
         <li>
-            <button className={styles.prefillItem} onClick={onClick}>
-                <span className={styles.title}>{item.movie}</span>
-                <span className={styles.year}>{item.releaseYear}</span>
-                <span className={styles.director}>{item.director}</span>
+            <button
+                className={styles.prefillItem}
+                onClick={onClick}
+                type='button'
+            >
+                <Movie {...item} />
             </button>
         </li>
     )
 }
 
 PrefillItem.propTypes = {
-    handleClick: PropTypes.fun,
+    handleClick: PropTypes.func,
     item: PropTypes.object,
 }

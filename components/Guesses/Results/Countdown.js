@@ -15,25 +15,25 @@ export default function Countdown() {
         .toString()
 
     useEffect(() => {
-        const test = setInterval(() => {
+        const timerInterval = setInterval(() => {
             const delta = calcTimeDelta(nextMovie)
             const time = formatTimeDelta(delta)
             setTimeLeft(`${time.hours}:${time.minutes}:${time.seconds}`)
         }, 1000)
 
         return () => {
-            clearInterval(test)
+            clearInterval(timerInterval)
 
             const delta = calcTimeDelta(nextMovie)
             if (delta.completed) {
                 router.reload(window.location.pathname)
             }
         }
-    }, [])
+    }, [nextMovie, router])
 
     return (
         <div className={styles.container}>
-            <h3 className={styles.title}>Time until next movie</h3>
+            <h2 className={styles.title}>Time until next movie</h2>
             <div>
                 {timeLeft ? (
                     <span className={styles.time}>{timeLeft}</span>

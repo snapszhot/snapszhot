@@ -5,10 +5,14 @@
 .title {
     color: var(--color-dark-grey);
     font-size: var(--font-size-small);
+    font-weight: var(--font-weight-sans-medium);
     margin-bottom: 0;
     text-transform: uppercase;
 }
 
 .time {
+    font-feature-settings: 'tnum';
     font-size: var(--font-size-medium);
+    font-variant-numeric: tabular-nums;
+    font-weight: var(--font-weight-sans-bold);
 }

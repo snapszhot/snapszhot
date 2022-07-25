@@ -2,20 +2,28 @@ import PropTypes from 'prop-types'
 import PrefillItem from './PrefillItem'
 import styles from './Prefill.module.scss'
 
+const optionMatchesValue = (option, value) =>
+    option.movie.toLowerCase().includes(value.toLowerCase())
+
 export default function Prefill({
     handlePrefillSelect,
     options,
     showPrefill,
     value,
 }) {
-    if (!showPrefill) {
+    // If we have no value or if the value entered doesn't match any
+    // of the prefill options, don't show the prefill box.
+    if (
+        !showPrefill ||
+        !options.some(option => optionMatchesValue(option, value))
+    ) {
         return null
     }
 
     return (
         <ul className={styles.prefill}>
             {options.map((option, index) => {
-                if (option.movie.toLowerCase().includes(value.toLowerCase())) {
+                if (optionMatchesValue(option, value)) {
                     return (
                         <PrefillItem
                             item={option}
