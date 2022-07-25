@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
+import getPrefills from '@lib/get-prefills'
 import { queryLatestMovie } from '@lib/prismic'
 import { GuessContextProvider } from '@lib/use-guess-context'
 
 import { Container, Guesses, HintImages } from '@components'
 
-export default function Home({ answer, day, images, subtitle }) {
+export default function Home({ answer, day, images, prefills, subtitle }) {
     return (
         <GuessContextProvider answer={answer} day={day}>
             <Head>
@@ -16,7 +17,7 @@ export default function Home({ answer, day, images, subtitle }) {
             </Head>
             <Container day={day} subtitle={subtitle}>
                 <HintImages images={images} />
-                <Guesses />
+                <Guesses prefills={prefills} />
             </Container>
         </GuessContextProvider>
     )
@@ -26,11 +27,13 @@ Home.propTypes = {
     answer: PropTypes.object,
     day: PropTypes.number,
     images: PropTypes.array,
+    prefills: PropTypes.array,
     subtitle: PropTypes.string,
 }
 
 export async function getStaticProps() {
     const post = await queryLatestMovie()
+    const prefills = await getPrefills()
 
     return {
         props: {
@@ -42,6 +45,7 @@ export async function getStaticProps() {
             },
             day: post.day,
             images: post.images,
+            prefills,
             subtitle: post.subtitle,
         },
         revalidate: 1,

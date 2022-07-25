@@ -1,77 +1,11 @@
+import PropTypes from 'prop-types'
 import { Form, Formik } from 'formik'
 import { useGuessContext } from '@lib/use-guess-context'
 
 import InputField from './InputField'
 import styles from './GuessForm.module.scss'
 
-const options = [
-    {
-        movie: '1984',
-        director: 'Michael Radford',
-        releaseYear: '1984',
-    },
-    {
-        movie: 'Army of Shadows',
-        director: 'Jean-Pierre Melville',
-        originalTitle: 'L’Armée des ombres',
-        releaseYear: '1969',
-    },
-    {
-        movie: 'An Autumn Afternoon',
-        director: 'Yasujirō Ozu',
-        originalTitle: '秋刀魚の味',
-        releaseYear: '1962',
-    },
-    { movie: 'Le Bonheur', director: 'Agnès Varda', releaseYear: '1965' },
-    {
-        movie: 'Double Indemnity',
-        director: 'Billy Wilder',
-        releaseYear: '1944',
-    },
-    {
-        movie: 'Jaws',
-        director: 'Steven Spielberg',
-        releaseYear: '1975',
-    },
-    {
-        movie: 'Le doulos',
-        director: 'Jean-Pierre Melville',
-        releaseYear: '1962',
-    },
-    { movie: 'Psycho', director: 'Alfred Hitchcock', releaseYear: '1960' },
-    { movie: 'Psycho', director: 'Gus Van Sant', releaseYear: '1998' },
-    { movie: 'Rango', director: 'Gore Verbinski', releaseYear: '2011' },
-    {
-        movie: 'Rashomon',
-        director: 'Akira Kurosawa',
-        originalTitle: '羅生門',
-        releaseYear: '1950',
-    },
-    {
-        movie: 'Le Samouraï',
-        director: 'Jean-Pierre Melville',
-        releaseYear: '1967',
-    },
-    {
-        movie: 'Seven Samurai',
-        director: 'Akira Kurosawa',
-        originalTitle: '七人の侍',
-        releaseYear: '1954',
-    },
-    {
-        movie: 'The Social Network',
-        director: 'David Fincher',
-        releaseYear: '2010',
-    },
-    {
-        movie: 'The Sound of Music',
-        director: 'Robert Wise',
-        releaseYear: '1965',
-    },
-    { movie: 'Summertime', director: 'David Lean', releaseYear: '1955' },
-]
-
-export default function GuessForm() {
+export default function GuessForm({ options }) {
     const {
         answer,
         currentGuess,
@@ -153,4 +87,8 @@ export default function GuessForm() {
             )}
         </Formik>
     )
+}
+
+GuessForm.propTypes = {
+    options: PropTypes.array,
 }
