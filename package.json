@@ -9,7 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@prismicio/client": "^6.6.2",
+        "@prismicio/client": "^6.6.3",
         "@prismicio/react": "^2.4.3",
         "classnames": "^2.3.1",
         "csv-parser": "^3.0.0",
