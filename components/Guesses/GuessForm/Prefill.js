@@ -20,7 +20,11 @@ export default function Prefill({
     for (let i = 0; i < options.length; i++) {
         const option = options[i]
 
-        if (regEx.test(option.movie) || regEx.test(option.director)) {
+        if (
+            regEx.test(option.movie) ||
+            regEx.test(option.director) ||
+            regEx.test(option.originalTitle)
+        ) {
             toShow.push(option)
         }
 
