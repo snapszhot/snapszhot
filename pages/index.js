@@ -23,6 +23,7 @@ export default function HomePage({ fallback, mostRecentDay, prefills }) {
 
 HomePage.propTypes = {
     fallback: PropTypes.object,
+    mostRecentDay: PropTypes.number,
     prefills: PropTypes.array,
 }
 
