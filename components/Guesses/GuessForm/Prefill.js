@@ -38,7 +38,7 @@ export default function Prefill({
             toShow.push(option)
         }
 
-        if (toShow.length > 9) {
+        if (toShow.length > 350) {
             break
         }
     }
