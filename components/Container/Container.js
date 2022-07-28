@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import { useGuessContext } from '@lib/use-guess-context'
 
 import Nav from './Nav'
-import Stats from './Stats'
 import styles from './Container.module.scss'
 
 export default function Container({ children, day, mostRecentDay, subtitle }) {
@@ -18,7 +17,6 @@ export default function Container({ children, day, mostRecentDay, subtitle }) {
                 <div className={styles.pageTitleWrapper}>
                     <div className={styles.pageTitle}>SNAPSЖOT</div>
                     <Nav day={day} mostRecentDay={mostRecentDay} />
-                    <Stats />
                 </div>
                 <div>
                     <h1>
