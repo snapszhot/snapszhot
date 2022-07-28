@@ -3,11 +3,11 @@ import Head from 'next/head'
 import { SWRConfig } from 'swr'
 
 import getPrefills from '@lib/get-prefills'
-import queryLatestMovie from '@lib/prismic'
+import queryMovies from '@lib/prismic'
 
-import { Game } from '@components'
+import { GameWithSWR } from '@components'
 
-export default function Home({ fallback, prefills }) {
+export default function HomePage({ fallback, prefills }) {
     return (
         <SWRConfig value={{ fallback }}>
             <Head>
@@ -16,18 +16,18 @@ export default function Home({ fallback, prefills }) {
                     Framed
                 </title>
             </Head>
-            <Game prefills={prefills} />
+            <GameWithSWR prefills={prefills} />
         </SWRConfig>
     )
 }
 
-Home.propTypes = {
+HomePage.propTypes = {
     fallback: PropTypes.object,
     prefills: PropTypes.array,
 }
 
 export async function getStaticProps() {
-    const fallback = await queryLatestMovie()
+    const fallback = await queryMovies()
     const prefills = await getPrefills()
 
     return {
