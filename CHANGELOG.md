@@ -1,9 +1,13 @@
 # Changelog
 
-## [v1.4.1](https://github.com/skilar/framed/compare/v1.4.0...v1.4.1)
+## [v1.4.2](https://github.com/skilar/framed/compare/v1.4.1...v1.4.2)
+
+- Tweak input field language [`7a7fb53`](https://github.com/skilar/framed/commit/7a7fb53f71e75a98b622d1b6c58702eeff1201b3)
+## [v1.4.1](https://github.com/skilar/framed/compare/v1.4.0...v1.4.1) (27 July 2022)
 
 - Fix prefill for todays answer [`077051c`](https://github.com/skilar/framed/commit/077051c0f88c0d89d5b5c8bb27a7be25e603deee)
 - Add CHANGELOG [`9719097`](https://github.com/skilar/framed/commit/9719097e22b381d52fcd5d0a6abcc59efede75de)
+- Releasing v1.4.1 [`a1d923e`](https://github.com/skilar/framed/commit/a1d923e7949ffe7066580b9262947a479677b10d)
 ## [v1.4.0](https://github.com/skilar/framed/compare/1.3.0...v1.4.0) (27 July 2022)
 
 - Add release-it [`d4a2c66`](https://github.com/skilar/framed/commit/d4a2c66d8371f739251b0a6f2a0eaaacf50d62a3)
