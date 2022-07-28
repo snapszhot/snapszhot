@@ -7,7 +7,7 @@ import Results from './Results'
 import StepList from './StepList'
 import styles from './Guesses.module.scss'
 
-export default function Guesses({ prefills }) {
+export default function Guesses({ day, prefills }) {
     const { gameState } = useGuessContext()
 
     return (
@@ -16,7 +16,7 @@ export default function Guesses({ prefills }) {
             {gameState === 'in-progress' ? (
                 <GuessForm options={prefills} />
             ) : (
-                <Results />
+                <Results day={day} />
             )}
             <GuessList />
         </div>
@@ -24,5 +24,6 @@ export default function Guesses({ prefills }) {
 }
 
 Guesses.propTypes = {
+    day: PropTypes.number,
     prefills: PropTypes.array,
 }

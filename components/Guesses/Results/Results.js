@@ -1,19 +1,34 @@
+import { useState } from 'react'
+import PropTypes from 'prop-types'
 import { useGuessContext } from '@lib/use-guess-context'
 import Countdown from './Countdown'
 import styles from './Results.module.scss'
 
-export default function Results() {
+export default function Results({ day }) {
+    const [copied, setCopied] = useState(false)
+    const [cantCopy, setCantCopy] = useState(false)
     const { answer, currentGuess, gameState } = useGuessContext()
-    // const wrong = currentGuess - 1
-    // const unused = 6 - wrong - 1
 
-    const wrong = []
-    const unused = []
+    let emoji = ''
     for (let i = 0; i < currentGuess - 1; i++) {
-        wrong.push('🟥 ')
+        emoji += '🟥 '
     }
+    emoji += '🟩 '
     for (let i = 0; i < 6 - currentGuess; i++) {
-        unused.push('⬛ ')
+        emoji += '⬛ '
+    }
+
+    const clipboard = `SNAPSЖOT: DAY ${day}\n【Ж】${emoji}\n\nhttps://snapszhot.vercel.app`
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(clipboard).then(
+            () => {
+                setCopied(true)
+                setTimeout(() => setCopied(null), 1500)
+            },
+            () => {
+                setCantCopy(true)
+            }
+        )
     }
 
     return (
@@ -21,9 +36,19 @@ export default function Results() {
             {gameState === 'won' ? (
                 <>
                     <h2 className={styles.correctTitle}>Good work!</h2>
-                    <div>
-                        {wrong}🟩 {unused}
-                    </div>
+                    <div>{emoji}</div>
+                    <button
+                        className={styles.share}
+                        onClick={copyToClipboard}
+                        type='button'
+                    >
+                        {copied ? <>Copied!</> : <>Share</>}
+                    </button>
+                    {cantCopy && (
+                        <div>
+                            <div className={styles.toShare}>{clipboard}</div>
+                        </div>
+                    )}
                 </>
             ) : (
                 <>
@@ -45,4 +70,8 @@ export default function Results() {
             <Countdown />
         </div>
     )
+}
+
+Results.propTypes = {
+    day: PropTypes.number,
 }

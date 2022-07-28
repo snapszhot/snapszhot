@@ -28,7 +28,7 @@ export default function Game({ prefills }) {
         <GuessContextProvider answer={answer} day={day}>
             <Container day={day} subtitle={subtitle}>
                 <HintImages images={images} />
-                <Guesses prefills={prefills} />
+                <Guesses day={day} prefills={prefills} />
             </Container>
         </GuessContextProvider>
     )
