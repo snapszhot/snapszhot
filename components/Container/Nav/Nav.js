@@ -7,7 +7,7 @@ import styles from './Nav.module.scss'
 export default function Nav({ day, mostRecentDay }) {
     const prevLink = `/day/${day - 1}`
     const nextLink = `/day/${day + 1}`
-    const randomLink = `/day/${getRandomInt(1, mostRecentDay, day)}`
+    const randomLink = `/day/${getRandomInt(49, mostRecentDay, day)}`
 
     return (
         <ul className={styles.nav}>
