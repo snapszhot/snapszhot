@@ -7,7 +7,7 @@ import queryMovies from '@lib/prismic'
 
 import { GameWithSWR } from '@components'
 
-export default function HomePage({ fallback, prefills }) {
+export default function HomePage({ fallback, mostRecentDay, prefills }) {
     return (
         <SWRConfig value={{ fallback }}>
             <Head>
@@ -16,7 +16,7 @@ export default function HomePage({ fallback, prefills }) {
                     Framed
                 </title>
             </Head>
-            <GameWithSWR prefills={prefills} />
+            <GameWithSWR mostRecentDay={mostRecentDay} prefills={prefills} />
         </SWRConfig>
     )
 }
@@ -27,14 +27,17 @@ HomePage.propTypes = {
 }
 
 export async function getStaticProps() {
-    const fallback = await queryMovies()
-    const prefills = await getPrefills()
+    const [fallback, prefills] = await Promise.all([
+        queryMovies(),
+        getPrefills(),
+    ])
 
     return {
         props: {
             fallback: {
                 '/': fallback,
             },
+            mostRecentDay: fallback.day,
             prefills,
         },
         revalidate: 60,

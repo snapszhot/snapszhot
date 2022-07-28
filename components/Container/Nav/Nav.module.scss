@@ -1,0 +1,8 @@
+.nav {
+    font-size: var(--font-size-small);
+
+    li {
+        display: inline-block;
+        margin: 0 var(--spacing-third);
+    }
+}

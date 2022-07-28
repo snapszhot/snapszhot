@@ -4,10 +4,21 @@ import Container from './Container'
 import Guesses from './Guesses'
 import HintImages from './HintImages'
 
-export default function Game({ answer, day, images, prefills, subtitle }) {
+export default function Game({
+    answer,
+    day,
+    images,
+    mostRecentDay,
+    prefills,
+    subtitle,
+}) {
     return (
         <GuessContextProvider answer={answer} day={day}>
-            <Container day={day} subtitle={subtitle}>
+            <Container
+                day={day}
+                mostRecentDay={mostRecentDay}
+                subtitle={subtitle}
+            >
                 <HintImages images={images} />
                 <Guesses day={day} prefills={prefills} />
             </Container>
@@ -19,6 +30,7 @@ Game.propTypes = {
     answer: PropTypes.object,
     day: PropTypes.number,
     images: PropTypes.array,
+    mostRecentDay: PropTypes.number,
     prefills: PropTypes.array,
     subtitle: PropTypes.string,
 }

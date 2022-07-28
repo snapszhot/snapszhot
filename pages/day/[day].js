@@ -19,12 +19,16 @@ export default function DayPage(props) {
 }
 
 export async function getStaticProps({ params }) {
-    const post = await queryMovies(1, parseInt(params.day))
-    const prefills = await getPrefills()
+    const [post, mostRecentDay, prefills] = await Promise.all([
+        queryMovies(1, parseInt(params.day)),
+        queryMovies(),
+        getPrefills(),
+    ])
 
     return {
         props: {
             ...post,
+            mostRecentDay: mostRecentDay.day,
             prefills,
         },
         revalidate: 120,
