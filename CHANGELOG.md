@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.4.0](https://github.com/skilar/framed/compare/1.3.0...1.4.0)
+## [v1.4.1](https://github.com/skilar/framed/compare/v1.4.0...v1.4.1)
+
+- Fix prefill for todays answer [`077051c`](https://github.com/skilar/framed/commit/077051c0f88c0d89d5b5c8bb27a7be25e603deee)
+- Add CHANGELOG [`9719097`](https://github.com/skilar/framed/commit/9719097e22b381d52fcd5d0a6abcc59efede75de)
+## [v1.4.0](https://github.com/skilar/framed/compare/1.3.0...v1.4.0) (27 July 2022)
 
 - Add release-it [`d4a2c66`](https://github.com/skilar/framed/commit/d4a2c66d8371f739251b0a6f2a0eaaacf50d62a3)
 - Add copy to clipboard [`7b25e54`](https://github.com/skilar/framed/commit/7b25e543f1cfdda6b251fc90af6f6808d394f1b6)
