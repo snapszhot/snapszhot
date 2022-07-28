@@ -40,7 +40,7 @@ export default function InputField({ name, options }) {
         <div className={styles.container}>
             <input
                 className={styles.input}
-                placeholder='Guess a movie...'
+                placeholder='Search for a movie or director...'
                 type='text'
                 {...field}
                 onChange={handleChange}
