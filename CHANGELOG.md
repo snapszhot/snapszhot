@@ -1,7 +1,11 @@
 # Changelog
 
-## [v1.4.2](https://github.com/skilar/framed/compare/v1.4.1...v1.4.2)
+## [v1.4.3](https://github.com/skilar/framed/compare/v1.4.2...v1.4.3)
 
+- Increase prefill suggestions to 350 [`a60b1bb`](https://github.com/skilar/framed/commit/a60b1bbf36934d28f2b4e007ebb52d5dcbfcee25)
+## [v1.4.2](https://github.com/skilar/framed/compare/v1.4.1...v1.4.2) (27 July 2022)
+
+- Releasing v1.4.2 [`1d33721`](https://github.com/skilar/framed/commit/1d337213cd04d895d459f86602b7c1dffbdc111b)
 - Tweak input field language [`7a7fb53`](https://github.com/skilar/framed/commit/7a7fb53f71e75a98b622d1b6c58702eeff1201b3)
 ## [v1.4.1](https://github.com/skilar/framed/compare/v1.4.0...v1.4.1) (27 July 2022)
 
