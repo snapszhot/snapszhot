@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
+import axios from 'axios'
 import useSWR from 'swr'
-import { queryLatestMovie } from '@lib/prismic'
-import formatPrismicPost from '@lib/format-prismic-post'
 
 import { GuessContextProvider } from '@lib/use-guess-context'
 import Container from './Container'
@@ -10,9 +9,9 @@ import HintImages from './HintImages'
 
 const fetcher = async () => {
     try {
-        const post = await queryLatestMovie()
+        const { data } = await axios.get('/api/prismic')
 
-        return formatPrismicPost(post)
+        return data
     } catch (error) {
         return error
     }

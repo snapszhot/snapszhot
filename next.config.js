@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
     images: {
         deviceSizes: [320, 480, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-        domains: ['images.prismic.io'],
+        domains: ['images.prismic.io', 'i.imgur.com'],
     },
     reactStrictMode: true,
     sassOptions: {

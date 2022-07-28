@@ -2,9 +2,8 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import { SWRConfig } from 'swr'
 
-import formatPrismicPost from '@lib/format-prismic-post'
 import getPrefills from '@lib/get-prefills'
-import { queryLatestMovie } from '@lib/prismic'
+import queryLatestMovie from '@lib/prismic'
 
 import { Game } from '@components'
 
@@ -28,9 +27,8 @@ Home.propTypes = {
 }
 
 export async function getStaticProps() {
-    const post = await queryLatestMovie()
+    const fallback = await queryLatestMovie()
     const prefills = await getPrefills()
-    const fallback = formatPrismicPost(post)
 
     return {
         props: {
