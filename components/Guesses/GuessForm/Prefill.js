@@ -2,6 +2,12 @@ import PropTypes from 'prop-types'
 import PrefillItem from './PrefillItem'
 import styles from './Prefill.module.scss'
 
+const normalizeString = string =>
+    string
+        .toLowerCase()
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+
 export default function Prefill({
     handlePrefillSelect,
     options,
@@ -14,16 +20,20 @@ export default function Prefill({
         return null
     }
 
-    const regEx = new RegExp(value, 'i')
+    const valueNormalized = normalizeString(value)
+    const regEx = new RegExp(valueNormalized, 'i')
     const toShow = []
 
     for (let i = 0; i < options.length; i++) {
         const option = options[i]
+        const movie = normalizeString(option.movie)
+        const director = normalizeString(option.director)
+        const originalTitle = normalizeString(option.originalTitle)
 
         if (
-            regEx.test(option.movie) ||
-            regEx.test(option.director) ||
-            regEx.test(option.originalTitle)
+            regEx.test(movie) ||
+            regEx.test(director) ||
+            regEx.test(originalTitle)
         ) {
             toShow.push(option)
         }
