@@ -1,0 +1,9 @@
+.lastPost {
+    margin-bottom: var(--spacing-single);
+}
+
+.day {
+    font-feature-settings: 'tnum';
+    font-variant-numeric: tabular-nums;
+    font-weight: var(--font-weight-sans-medium);
+}

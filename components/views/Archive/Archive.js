@@ -10,9 +10,15 @@ export default function Archive({ posts, ...props }) {
             <Container {...props}>
                 <CenteredWrapper padding='0 var(--spacing-single) var(--spacing-triple)'>
                     <ul>
-                        {posts.map((post, index) => (
-                            <ArchivePost {...post.data} key={index} />
-                        ))}
+                        {posts.map(postGroup =>
+                            postGroup.map((post, index) => (
+                                <ArchivePost
+                                    {...post}
+                                    isLast={index + 1 === postGroup.length}
+                                    key={index}
+                                />
+                            ))
+                        )}
                     </ul>
                 </CenteredWrapper>
             </Container>
