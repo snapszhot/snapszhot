@@ -1,7 +1,12 @@
 # Changelog
 
-## [v1.5.3](https://github.com/skilar/snapszhot/compare/v1.5.2...v1.5.3)
+## [v1.5.4](https://github.com/skilar/snapszhot/compare/v1.5.3...v1.5.4)
 
+- Update README [`2519d90`](https://github.com/skilar/snapszhot/commit/2519d90602967aa17137b9c194d21a723db21422)
+- Add favicon [`aa678a6`](https://github.com/skilar/snapszhot/commit/aa678a66265419142e93b57c59c5ee63ee5c57cf)
+## [v1.5.3](https://github.com/skilar/snapszhot/compare/v1.5.2...v1.5.3) (29 July 2022)
+
+- Releasing v1.5.3 [`fb0c5df`](https://github.com/skilar/snapszhot/commit/fb0c5df8576af8b3c4f89c08833bb00340ca518e)
 - Sort archive in ascending chronological order [`fbb2547`](https://github.com/skilar/snapszhot/commit/fbb25472de63a1dbf445dc236e48a83ab6a8b6d2)
 ## [v1.5.2](https://github.com/skilar/snapszhot/compare/v1.5.1...v1.5.2) (29 July 2022)
 
