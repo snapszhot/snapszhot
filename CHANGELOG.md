@@ -1,8 +1,13 @@
 # Changelog
 
-## [v1.5.1](https://github.com/skilar/snapszhot/compare/v1.5.0...v1.5.1)
+## [v1.5.2](https://github.com/skilar/snapszhot/compare/v1.5.1...v1.5.2)
+
+- Fix random button when only one clue is left [`85da8ab`](https://github.com/skilar/snapszhot/commit/85da8ab987c5c1c187e0a015fe3c266a9a2738e7)
+- Add win/loss indicators to archive page [`3bca7a8`](https://github.com/skilar/snapszhot/commit/3bca7a8d392b49e9769cd6dba87e2edcf52969cc)
+## [v1.5.1](https://github.com/skilar/snapszhot/compare/v1.5.0...v1.5.1) (28 July 2022)
 
 - Improve archive page styling [`0868ea6`](https://github.com/skilar/snapszhot/commit/0868ea67aefa08c5e4df8d71b9d1a3aa3cdedba9)
+- Releasing v1.5.1 [`d09a35a`](https://github.com/skilar/snapszhot/commit/d09a35a9f2589b84bdd1f5328fd0efb422e28167)
 ## [v1.5.0](https://github.com/skilar/snapszhot/compare/v1.4.3...v1.5.0) (28 July 2022)
 
 - Improve navigation [`#3`](https://github.com/skilar/snapszhot/pull/3)
