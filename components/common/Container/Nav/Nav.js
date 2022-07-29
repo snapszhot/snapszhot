@@ -1,19 +1,11 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
-import getRandomInt from '@lib/get-random-int'
-import { getPlayedGames } from '@lib/storage'
+import getRandomLink from '@lib/get-random-link'
 
 import Stats from '../Stats'
 import NavIcon from './NavIcon'
 import styles from './Nav.module.scss'
-
-function getRandomLink(day, mostRecentDay) {
-    const playedGames = getPlayedGames()
-    const exclude = [...playedGames, day]
-
-    return getRandomInt(49, mostRecentDay, exclude)
-}
 
 export default function Nav({ day, mostRecentDay }) {
     const { pathname } = useRouter()
@@ -23,7 +15,7 @@ export default function Nav({ day, mostRecentDay }) {
     const showGameNav = pathname !== '/archive'
     const prevLink = `/day/${day - 1}`
     const nextLink = `/day/${day + 1}`
-    const randomLink = `/day/${getRandomLink(day, mostRecentDay)}`
+    const randomLink = getRandomLink(day, mostRecentDay)
 
     return (
         <>
