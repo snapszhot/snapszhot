@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types'
+import { getPlayedGames } from '@lib/storage'
 import { GuessContextProvider } from '@lib/use-guess-context'
 
 import { CenteredWrapper, Container } from '@components/common'
 import ArchivePost from './ArchivePost'
 
 export default function Archive({ posts, ...props }) {
+    const playedGames = getPlayedGames(true)
+
     return (
         <GuessContextProvider>
             <Container {...props}>
@@ -15,6 +18,7 @@ export default function Archive({ posts, ...props }) {
                                 <ArchivePost
                                     {...post}
                                     isLast={index + 1 === postGroup.length}
+                                    result={playedGames?.[post.day]}
                                     key={index}
                                 />
                             ))

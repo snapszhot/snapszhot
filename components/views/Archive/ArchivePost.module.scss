@@ -1,5 +1,16 @@
+.post {
+    position: relative;
+}
+
 .lastPost {
     margin-bottom: var(--spacing-single);
+}
+
+.result {
+    font-size: 8px;
+    margin-left: -1rem;
+    position: absolute;
+    top: 6px;
 }
 
 .day {

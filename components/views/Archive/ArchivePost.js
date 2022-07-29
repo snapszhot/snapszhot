@@ -3,14 +3,21 @@ import Link from 'next/link'
 import cn from 'classnames'
 import styles from './ArchivePost.module.scss'
 
-export default function ArchivePost({ day, isLast, subtitle }) {
+export default function ArchivePost({ day, isLast, result, subtitle }) {
     const link = `/day/${day}`
-    const className = cn({
+    const won = result === 'won'
+    const lost = result === 'lost'
+
+    const className = cn(styles.post, {
         [styles.lastPost]: isLast,
     })
 
     return (
         <li className={className}>
+            <span className={styles.result}>
+                {lost && <>❌</>}
+                {won && <>✅</>}
+            </span>
             <span className={styles.day}>DAY {day}: </span>
             <Link href={link}>
                 <a>{subtitle}</a>
@@ -21,6 +28,7 @@ export default function ArchivePost({ day, isLast, subtitle }) {
 
 ArchivePost.propTypes = {
     day: PropTypes.number,
-    isLast: PropTypes.string,
+    isLast: PropTypes.bool,
+    result: PropTypes.string,
     subtitle: PropTypes.string,
 }
