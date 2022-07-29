@@ -6,18 +6,16 @@ import queryMovies from '@lib/prismic'
 
 import { GameWithSWR } from '@components/views'
 
-export default function HomePage({ fallback, mostRecentDay, prefills }) {
+export default function HomePage({ fallback, ...props }) {
     return (
         <SWRConfig value={{ fallback }}>
-            <GameWithSWR mostRecentDay={mostRecentDay} prefills={prefills} />
+            <GameWithSWR {...props} />
         </SWRConfig>
     )
 }
 
 HomePage.propTypes = {
     fallback: PropTypes.object,
-    mostRecentDay: PropTypes.number,
-    prefills: PropTypes.array,
 }
 
 export async function getStaticProps() {
@@ -32,6 +30,7 @@ export async function getStaticProps() {
                 '/': fallback,
             },
             mostRecentDay: fallback.day,
+            ogImage: fallback.images[0].image.url,
             prefills,
         },
         revalidate: 60,

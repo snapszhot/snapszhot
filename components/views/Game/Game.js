@@ -10,18 +10,13 @@ export default function Game({
     answer,
     day,
     images,
-    mostRecentDay,
-    pageTitle,
     prefills,
     subtitle,
+    ...props
 }) {
     return (
         <GuessContextProvider answer={answer} day={day}>
-            <Container
-                day={day}
-                mostRecentDay={mostRecentDay}
-                pageTitle={pageTitle}
-            >
+            <Container day={day} {...props}>
                 <CenteredWrapper>
                     <h1>
                         <span className={styles.day}>Day {day}</span>
@@ -39,8 +34,6 @@ Game.propTypes = {
     answer: PropTypes.object,
     day: PropTypes.number,
     images: PropTypes.array,
-    mostRecentDay: PropTypes.number,
-    pageTitle: PropTypes.string,
     prefills: PropTypes.array,
     subtitle: PropTypes.string,
 }

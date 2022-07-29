@@ -14,11 +14,16 @@ export async function getStaticProps({ params }) {
         getPrefills(),
     ])
 
+    const { day, images, subtitle } = post
+
     return {
         props: {
             ...post,
             mostRecentDay: mostRecentDay.day,
-            pageTitle: `DAY ${post.day}`,
+            ogImage: images[0].image.url,
+            ogTitle: `DAY ${day}`,
+            pageDescription: subtitle,
+            pageTitle: `DAY ${day}: ${subtitle}`,
             prefills,
         },
         revalidate: 120,

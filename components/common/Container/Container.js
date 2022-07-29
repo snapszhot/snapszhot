@@ -1,32 +1,53 @@
 import PropTypes from 'prop-types'
-import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 import { useGuessContext } from '@lib/use-guess-context'
 
 import CenteredWrapper from '../CenteredWrapper'
 import Nav from './Nav'
 import styles from './Container.module.scss'
 
-export default function Container({ children, day, mostRecentDay, pageTitle }) {
-    const { pathname } = useRouter()
+export default function Container({
+    children,
+    day,
+    mostRecentDay,
+    ogImage,
+    ogTitle,
+    pageDescription,
+    pageTitle,
+}) {
+    const { asPath } = useRouter()
     const { loading } = useGuessContext()
 
     if (loading) {
         return null
     }
 
+    const siteName = 'SNAPSЖOT'
+    const description =
+        pageDescription ||
+        'swo17’s attempt at a more eclectic version of Framed'
     const title = pageTitle
         ? `${pageTitle} - SNAPSЖOT`
-        : 'SNAPSЖOT: swo17’s attempt at a more eclectic version of Framed'
-    const showLink = pathname !== '/'
-    const inlineTitle = 'SNAPSЖOT'
+        : `SNAPSЖOT: ${description}`
+    const canonical = `https://snapszhot.vercel.app${asPath}`
+    const images = ogImage ? [{ url: ogImage }] : null
+    const showLink = asPath !== '/'
 
     return (
         <div className={styles.container}>
-            <Head>
-                <title>{title}</title>
-            </Head>
+            <NextSeo
+                title={title}
+                description={description}
+                canonical={canonical}
+                openGraph={{
+                    url: canonical,
+                    title: ogTitle || pageTitle || siteName,
+                    images,
+                    site_name: siteName,
+                }}
+            />
             <header>
                 <CenteredWrapper padding='var(--spacing-single)'>
                     <div className={styles.pageTitleWrapper}>
@@ -34,11 +55,11 @@ export default function Container({ children, day, mostRecentDay, pageTitle }) {
                             {showLink ? (
                                 <Link href='/'>
                                     <a className={styles.titleLink}>
-                                        {inlineTitle}
+                                        {siteName}
                                     </a>
                                 </Link>
                             ) : (
-                                <>{inlineTitle}</>
+                                <>{siteName}</>
                             )}
                         </div>
                         <Nav day={day} mostRecentDay={mostRecentDay} />
@@ -54,5 +75,8 @@ Container.propTypes = {
     children: PropTypes.node,
     day: PropTypes.number,
     mostRecentDay: PropTypes.number,
+    ogImage: PropTypes.string,
+    ogTitle: PropTypes.string,
+    pageDescription: PropTypes.string,
     pageTitle: PropTypes.string,
 }
