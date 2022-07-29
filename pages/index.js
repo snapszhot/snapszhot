@@ -1,40 +1,36 @@
 import PropTypes from 'prop-types'
-import Head from 'next/head'
 import { SWRConfig } from 'swr'
 
 import getPrefills from '@lib/get-prefills'
-import queryLatestMovie from '@lib/prismic'
+import queryMovies from '@lib/prismic'
 
-import { Game } from '@components'
+import { GameWithSWR } from '@components/views'
 
-export default function Home({ fallback, prefills }) {
+export default function HomePage({ fallback, ...props }) {
     return (
         <SWRConfig value={{ fallback }}>
-            <Head>
-                <title>
-                    SNAPSЖOT: swo17’s attempt at a more eclectic version of
-                    Framed
-                </title>
-            </Head>
-            <Game prefills={prefills} />
+            <GameWithSWR {...props} />
         </SWRConfig>
     )
 }
 
-Home.propTypes = {
+HomePage.propTypes = {
     fallback: PropTypes.object,
-    prefills: PropTypes.array,
 }
 
 export async function getStaticProps() {
-    const fallback = await queryLatestMovie()
-    const prefills = await getPrefills()
+    const [fallback, prefills] = await Promise.all([
+        queryMovies(),
+        getPrefills(),
+    ])
 
     return {
         props: {
             fallback: {
                 '/': fallback,
             },
+            mostRecentDay: fallback.day,
+            ogImage: fallback.images[0].image.url,
             prefills,
         },
         revalidate: 60,
