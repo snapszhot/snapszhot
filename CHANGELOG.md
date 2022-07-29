@@ -1,9 +1,13 @@
 # Changelog
 
-## [v1.5.0](https://github.com/skilar/snapszhot/compare/v1.4.3...v1.5.0)
+## [v1.5.1](https://github.com/skilar/snapszhot/compare/v1.5.0...v1.5.1)
+
+- Improve archive page styling [`0868ea6`](https://github.com/skilar/snapszhot/commit/0868ea67aefa08c5e4df8d71b9d1a3aa3cdedba9)
+## [v1.5.0](https://github.com/skilar/snapszhot/compare/v1.4.3...v1.5.0) (28 July 2022)
 
 - Improve navigation [`#3`](https://github.com/skilar/snapszhot/pull/3)
 - Add animated GIF support [`#2`](https://github.com/skilar/snapszhot/pull/2)
+- Releasing v1.5.0 [`3d70d3c`](https://github.com/skilar/snapszhot/commit/3d70d3cb4b7ee3e4c43f61ff1d99551a6414aa62)
 ## [v1.4.3](https://github.com/skilar/snapszhot/compare/v1.4.2...v1.4.3) (27 July 2022)
 
 - Releasing v1.4.3 [`975fbc5`](https://github.com/skilar/snapszhot/commit/975fbc5ca6692d4c4f8ad0bc4880fc1db9108478)
