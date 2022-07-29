@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { Form, Formik } from 'formik'
+import axios from 'axios'
 import { useGuessContext } from '@lib/use-guess-context'
 
 import InputField from './InputField'
@@ -9,6 +10,7 @@ export default function GuessForm({ options }) {
     const {
         answer,
         currentGuess,
+        day,
         guesses,
         setCurrentGuess,
         setCurrentImage,
@@ -43,6 +45,15 @@ export default function GuessForm({ options }) {
                 playerWon,
                 todaysGuesses: numberOfGuesses,
             })
+            axios
+                .post('/api/supabase', {
+                    puzzle_id: day,
+                    won: playerWon,
+                    frame_won: numberOfGuesses,
+                })
+                .catch(err => {
+                    console.log('axios error: ', err) // eslint-disable-line no-console
+                })
         }
 
         if (currentGuess < 5) {
