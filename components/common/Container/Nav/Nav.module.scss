@@ -4,6 +4,10 @@
     li {
         display: inline-block;
         margin: 0 var(--spacing-third);
+
+        &:last-of-type {
+            margin-right: 0;
+        }
     }
 }
 

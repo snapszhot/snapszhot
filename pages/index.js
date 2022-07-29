@@ -1,21 +1,14 @@
 import PropTypes from 'prop-types'
-import Head from 'next/head'
 import { SWRConfig } from 'swr'
 
 import getPrefills from '@lib/get-prefills'
 import queryMovies from '@lib/prismic'
 
-import { GameWithSWR } from '@components'
+import { GameWithSWR } from '@components/views'
 
 export default function HomePage({ fallback, mostRecentDay, prefills }) {
     return (
         <SWRConfig value={{ fallback }}>
-            <Head>
-                <title>
-                    SNAPSЖOT: swo17’s attempt at a more eclectic version of
-                    Framed
-                </title>
-            </Head>
             <GameWithSWR mostRecentDay={mostRecentDay} prefills={prefills} />
         </SWRConfig>
     )
