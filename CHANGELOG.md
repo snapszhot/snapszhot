@@ -1,8 +1,13 @@
 # Changelog
 
-## [v1.6.0](https://github.com/skilar/snapszhot/compare/v1.5.4...v1.6.0)
+## [v1.7.0](https://github.com/skilar/snapszhot/compare/v1.6.0...v1.7.0)
+
+- Add PWA [`52de702`](https://github.com/skilar/snapszhot/commit/52de702dd0081f2c5ec9a295120df90ef05896c3)
+- Remove @prismicio/react [`147e24e`](https://github.com/skilar/snapszhot/commit/147e24ead7ba6a982517dc850985bc39e21b8e5d)
+## [v1.6.0](https://github.com/skilar/snapszhot/compare/v1.5.4...v1.6.0) (29 July 2022)
 
 - Add basic analytics [`dca8933`](https://github.com/skilar/snapszhot/commit/dca8933e3d779a519beb788662b0d8861303d437)
+- Releasing v1.6.0 [`534a14c`](https://github.com/skilar/snapszhot/commit/534a14c5a13345f9a238fa3014df0741142c627e)
 ## [v1.5.4](https://github.com/skilar/snapszhot/compare/v1.5.3...v1.5.4) (29 July 2022)
 
 - Update README [`2519d90`](https://github.com/skilar/snapszhot/commit/2519d90602967aa17137b9c194d21a723db21422)
