@@ -1,6 +1,6 @@
 {
     "name": "snapswot",
-    "version": "1.7.2",
+    "version": "1.7.1",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -46,7 +46,7 @@
             "tokenRef": "GITHUB_TOKEN"
         },
         "hooks": {
-            "after:bump": "npx auto-changelog -p"
+            "after:bump": "npx auto-changelog -p --template changelog-template.hbs --ignore-commit-pattern \"^(Releasing v.*)\""
         },
         "npm": {
             "publish": false
