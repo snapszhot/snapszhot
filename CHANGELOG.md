@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.7.2](https://github.com/skilar/snapszhot/compare/v1.7.2...v1.7.2)
+
+-   Update changelog template [`8f1fd2f`](https://github.com/skilar/snapszhot/commit/8f1fd2f172e832714058f63dc4b68a5739b1f907)
+
 ## [v1.7.2](https://github.com/skilar/snapszhot/compare/v1.7.1...v1.7.2) (31 July 2022)
 
 -   Update archive sort [`f8d7a88`](https://github.com/skilar/snapszhot/commit/f8d7a8802d89db1863fe9693ee81327f73102783)
