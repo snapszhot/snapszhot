@@ -1,9 +1,13 @@
 # Changelog
 
-## [v1.7.0](https://github.com/skilar/snapszhot/compare/v1.6.0...v1.7.0)
+## [v1.7.1](https://github.com/skilar/snapszhot/compare/v1.7.0...v1.7.1)
+
+- Properly initialize game context [`0d3ee41`](https://github.com/skilar/snapszhot/commit/0d3ee41b790a671cf1b7c6fa00bc695e54c46337)
+## [v1.7.0](https://github.com/skilar/snapszhot/compare/v1.6.0...v1.7.0) (30 July 2022)
 
 - Add PWA [`52de702`](https://github.com/skilar/snapszhot/commit/52de702dd0081f2c5ec9a295120df90ef05896c3)
 - Remove @prismicio/react [`147e24e`](https://github.com/skilar/snapszhot/commit/147e24ead7ba6a982517dc850985bc39e21b8e5d)
+- Releasing v1.7.0 [`a9f4548`](https://github.com/skilar/snapszhot/commit/a9f4548e85fd575f914f76a0ff2721950c185440)
 ## [v1.6.0](https://github.com/skilar/snapszhot/compare/v1.5.4...v1.6.0) (29 July 2022)
 
 - Add basic analytics [`dca8933`](https://github.com/skilar/snapszhot/commit/dca8933e3d779a519beb788662b0d8861303d437)
