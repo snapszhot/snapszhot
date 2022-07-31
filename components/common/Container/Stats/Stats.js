@@ -18,8 +18,8 @@ export default function Stats({ isOpen, toggleModal }) {
     }
 
     const winPercentage =
-        stats.gamesPlayed !== 0
-            ? parseFloat((stats.gamesWon / stats.gamesPlayed) * 100).toFixed(
+        stats?.gamesPlayed !== 0
+            ? parseFloat((stats?.gamesWon / stats?.gamesPlayed) * 100).toFixed(
                   2
               ) + '%'
             : '0%'
@@ -39,11 +39,14 @@ export default function Stats({ isOpen, toggleModal }) {
                 </button>
             </div>
             <dl className={styles.stats}>
-                <StatItem number={stats.gamesPlayed} title='Games Played' />
-                <StatItem number={stats.gamesWon} title='Games Won' />
+                <StatItem number={stats?.gamesPlayed} title='Games Played' />
+                <StatItem number={stats?.gamesWon} title='Games Won' />
                 <StatItem number={winPercentage} title='Win %' />
-                <StatItem number={stats.currentStreak} title='Current Streak' />
-                <StatItem number={stats.maxStreak} title='Longest Streak' />
+                <StatItem
+                    number={stats?.currentStreak}
+                    title='Current Streak'
+                />
+                <StatItem number={stats?.maxStreak} title='Longest Streak' />
             </dl>
             <GuessGrid {...stats} />
         </Modal>

@@ -21,7 +21,7 @@ export async function getStaticProps({ params }) {
             ...post,
             mostRecentDay: mostRecentDay.day,
             ogImage: images[0].image.url,
-            ogTitle: `DAY ${day}`,
+            ogTitle: `DAY ${day} - SNAPSЖOT`,
             pageDescription: subtitle,
             pageTitle: `DAY ${day}: ${subtitle}`,
             prefills,

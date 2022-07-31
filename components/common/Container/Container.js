@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
-import { useGuessContext } from '@lib/use-guess-context'
 
 import CenteredWrapper from '../CenteredWrapper'
 import Nav from './Nav'
@@ -18,11 +17,6 @@ export default function Container({
     pageTitle,
 }) {
     const { asPath } = useRouter()
-    const { loading } = useGuessContext()
-
-    if (loading) {
-        return null
-    }
 
     const siteName = 'SNAPSЖOT'
     const description =
@@ -46,6 +40,9 @@ export default function Container({
                     title: ogTitle || pageTitle || siteName,
                     images,
                     site_name: siteName,
+                }}
+                twitter={{
+                    cardType: 'summary_large_image',
                 }}
             />
             <header>
