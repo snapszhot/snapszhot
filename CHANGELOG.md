@@ -1,8 +1,9 @@
 # Changelog
 
-## [v1.7.2](https://github.com/skilar/snapszhot/compare/v1.7.2...v1.7.2)
+## [v1.7.3](https://github.com/skilar/snapszhot/compare/v1.7.2...v1.7.3)
 
 -   Update changelog template [`8f1fd2f`](https://github.com/skilar/snapszhot/commit/8f1fd2f172e832714058f63dc4b68a5739b1f907)
+-   Roll back random link [`4ac516d`](https://github.com/skilar/snapszhot/commit/4ac516d8e9f1c08ee489dba7acc29ed91a9f6b37)
 
 ## [v1.7.2](https://github.com/skilar/snapszhot/compare/v1.7.1...v1.7.2) (31 July 2022)
 
