@@ -1,3 +1,4 @@
+import path from 'path'
 import PropTypes from 'prop-types'
 import { SWRConfig } from 'swr'
 
@@ -19,9 +20,12 @@ HomePage.propTypes = {
 }
 
 export async function getStaticProps() {
+    // We have to load this file within getStaticProps itself because of some weird
+    // Next.js requirement. See https://github.com/vercel/next.js/discussions/32236#discussioncomment-3202094
+    const dataPath = path.join(process.cwd(), 'public/swos-prefills-grem.csv')
     const [fallback, prefills] = await Promise.all([
         queryMovies(),
-        getPrefills(),
+        getPrefills(dataPath),
     ])
 
     return {
