@@ -15,7 +15,7 @@ export default function Nav({ day, mostRecentDay }) {
     const showGameNav = pathname !== '/archive'
     const prevLink = `/day/${day - 1}`
     const nextLink = `/day/${day + 1}`
-    const randomLink = getRandomLink(day, mostRecentDay)
+    const randomLink = getRandomLink({ day, mostRecentDay })
 
     return (
         <>
