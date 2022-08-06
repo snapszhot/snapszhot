@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.8.1](https://github.com/skilar/snapszhot/compare/v1.8.0...v1.8.1)
+## [v1.8.2](https://github.com/skilar/snapszhot/compare/v1.8.1...v1.8.2)
+
+-   Don’t update analytics during preview and dev [`a85f326`](https://github.com/skilar/snapszhot/commit/a85f326d83b3f83f7d432c41e3437c442416ec61)
+-   Don’t load stats and guesses when previewing [`2209960`](https://github.com/skilar/snapszhot/commit/2209960e5b49c8a6383ff5a4aadbbe0a5ea3f529)
+
+## [v1.8.1](https://github.com/skilar/snapszhot/compare/v1.8.0...v1.8.1) (6 August 2022)
 
 -   Don’t update stats or save answers in preview mode [`3b6fad7`](https://github.com/skilar/snapszhot/commit/3b6fad769a27e80ef852dd0edf6bbef27487a5da)
 
