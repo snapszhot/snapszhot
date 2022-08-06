@@ -1,6 +1,6 @@
 import path from 'path'
 import getPrefills from '@lib/get-prefills'
-import queryMovies from '@lib/prismic'
+import { getAllMovies, getSingleMovie } from '@lib/prismic'
 
 import { Game } from '@components/views'
 
@@ -8,13 +8,13 @@ export default function DayPage(props) {
     return <Game {...props} />
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, preview = false, previewData }) {
     // We have to load this file within getStaticProps itself because of some weird
     // Next.js requirement. See https://github.com/vercel/next.js/discussions/32236#discussioncomment-3202094
     const dataPath = path.join(process.cwd(), 'public/swos-prefills-grem.csv')
     const [post, mostRecentDay, prefills] = await Promise.all([
-        queryMovies(1, parseInt(params.day)),
-        queryMovies(),
+        getSingleMovie(previewData, parseInt(params.day)),
+        getSingleMovie(),
         getPrefills(dataPath),
     ])
 
@@ -29,13 +29,14 @@ export async function getStaticProps({ params }) {
             pageDescription: subtitle,
             pageTitle: `DAY ${day}: ${subtitle}`,
             prefills,
+            preview,
         },
         revalidate: 120,
     }
 }
 
 export async function getStaticPaths() {
-    const posts = await queryMovies(100)
+    const posts = await getAllMovies()
     const paths = posts.map(post => {
         return {
             params: {

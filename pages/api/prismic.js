@@ -1,8 +1,8 @@
-import queryMovies from '@lib/prismic'
+import { getSingleMovie } from '@lib/prismic'
 
 export default async function handler(req, res) {
     try {
-        const movie = await queryMovies()
+        const movie = await getSingleMovie()
 
         res.status(200).json(movie)
     } catch {

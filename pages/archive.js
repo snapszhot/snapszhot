@@ -1,15 +1,15 @@
 import groupByTens from '@lib/group-by-tens'
-import queryMovies, { getAllMovies } from '@lib/prismic'
+import { getAllMovies, getSingleMovie } from '@lib/prismic'
 import { Archive } from '@components/views'
 
 export default function ArchivePage(props) {
     return <Archive {...props} />
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false, previewData }) {
     const [rawPosts, mostRecentDay] = await Promise.all([
-        getAllMovies(),
-        queryMovies(),
+        getAllMovies(previewData),
+        getSingleMovie(previewData),
     ])
     const posts = groupByTens(rawPosts)
 
@@ -18,6 +18,7 @@ export async function getStaticProps() {
             posts,
             mostRecentDay: mostRecentDay.day,
             pageTitle: 'Archive',
+            preview,
         },
         revalidate: 120,
     }

@@ -8,7 +8,7 @@ export default function HintImage({ dimensions, index, url }) {
     const isDisplayed = index + 1 === currentImage
 
     const MAX_HEIGHT = 320
-    const MAX_WIDTH = (dimensions.width / dimensions.height) * MAX_HEIGHT
+    const MAX_WIDTH = (dimensions?.width / dimensions?.height) * MAX_HEIGHT
 
     if (isDisplayed) {
         return (

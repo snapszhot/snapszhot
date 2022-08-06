@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { SWRConfig } from 'swr'
 
 import getPrefills from '@lib/get-prefills'
-import queryMovies from '@lib/prismic'
+import { getSingleMovie } from '@lib/prismic'
 
 import { GameWithSWR } from '@components/views'
 
@@ -19,12 +19,12 @@ HomePage.propTypes = {
     fallback: PropTypes.object,
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false }) {
     // We have to load this file within getStaticProps itself because of some weird
     // Next.js requirement. See https://github.com/vercel/next.js/discussions/32236#discussioncomment-3202094
     const dataPath = path.join(process.cwd(), 'public/swos-prefills-grem.csv')
     const [fallback, prefills] = await Promise.all([
-        queryMovies(),
+        getSingleMovie(),
         getPrefills(dataPath),
     ])
 
@@ -36,6 +36,7 @@ export async function getStaticProps() {
             mostRecentDay: fallback.day,
             ogImage: fallback.images[0].image.url,
             prefills,
+            preview,
         },
         revalidate: 60,
     }

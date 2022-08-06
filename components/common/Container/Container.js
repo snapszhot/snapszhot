@@ -15,6 +15,7 @@ export default function Container({
     ogTitle,
     pageDescription,
     pageTitle,
+    preview,
 }) {
     const { asPath } = useRouter()
 
@@ -31,6 +32,14 @@ export default function Container({
 
     return (
         <div className={styles.container}>
+            {preview && (
+                <div className={styles.previewBanner}>
+                    You are in preview mode.{' '}
+                    <Link href='/api/exit-preview'>
+                        <a>Exit preview mode.</a>
+                    </Link>
+                </div>
+            )}
             <NextSeo
                 title={title}
                 description={description}
@@ -76,4 +85,5 @@ Container.propTypes = {
     ogTitle: PropTypes.string,
     pageDescription: PropTypes.string,
     pageTitle: PropTypes.string,
+    preview: PropTypes.bool,
 }

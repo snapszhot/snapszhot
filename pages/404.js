@@ -1,4 +1,4 @@
-import queryMovies from '@lib/prismic'
+import { getSingleMovie } from '@lib/prismic'
 import { FourOhFour } from '@components/views'
 
 export default function FourOhFourPage(props) {
@@ -6,7 +6,7 @@ export default function FourOhFourPage(props) {
 }
 
 export async function getStaticProps() {
-    const [mostRecentDay] = await Promise.all([queryMovies()])
+    const mostRecentDay = await getSingleMovie()
 
     return {
         props: {
