@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.8.0](https://github.com/skilar/snapszhot/compare/v1.7.5...v1.8.0)
+## [v1.8.1](https://github.com/skilar/snapszhot/compare/v1.8.0...v1.8.1)
+
+-   Don’t update stats or save answers in preview mode [`3b6fad7`](https://github.com/skilar/snapszhot/commit/3b6fad769a27e80ef852dd0edf6bbef27487a5da)
+
+## [v1.8.0](https://github.com/skilar/snapszhot/compare/v1.7.5...v1.8.0) (6 August 2022)
 
 -   Add preview mode [`c74edc4`](https://github.com/skilar/snapszhot/commit/c74edc43e3e61a3f1bc98a658b893f4fa65a6096)
 -   Switch to new Prismic image fields [`de3533a`](https://github.com/skilar/snapszhot/commit/de3533a8422332f29cbaad7d0cff10f777210592)
