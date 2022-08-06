@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.7.5](https://github.com/skilar/snapszhot/compare/v1.7.4...v1.7.5)
+## [v1.8.0](https://github.com/skilar/snapszhot/compare/v1.7.5...v1.8.0)
+
+-   Add preview mode [`c74edc4`](https://github.com/skilar/snapszhot/commit/c74edc43e3e61a3f1bc98a658b893f4fa65a6096)
+-   Switch to new Prismic image fields [`de3533a`](https://github.com/skilar/snapszhot/commit/de3533a8422332f29cbaad7d0cff10f777210592)
+
+## [v1.7.5](https://github.com/skilar/snapszhot/compare/v1.7.4...v1.7.5) (5 August 2022)
 
 -   Bump dependencies [`93bccc2`](https://github.com/skilar/snapszhot/commit/93bccc2dc024cf000df4060172706e996c085a13)
 -   Add 404 page [`6118403`](https://github.com/skilar/snapszhot/commit/611840352c2c99b5bb3b8225ab5b25de82819b4b)
