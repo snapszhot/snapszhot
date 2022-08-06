@@ -11,12 +11,13 @@ export default function Game({
     day,
     images,
     prefills,
+    preview,
     subtitle,
     ...props
 }) {
     return (
-        <GuessContextProvider answer={answer} day={day}>
-            <Container day={day} {...props}>
+        <GuessContextProvider answer={answer} day={day} preview={preview}>
+            <Container day={day} preview={preview} {...props}>
                 <CenteredWrapper>
                     <h1>
                         <span className={styles.day}>Day {day}</span>
@@ -35,5 +36,6 @@ Game.propTypes = {
     day: PropTypes.number,
     images: PropTypes.array,
     prefills: PropTypes.array,
+    preview: PropTypes.bool,
     subtitle: PropTypes.string,
 }
