@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.7.4](https://github.com/skilar/snapszhot/compare/v1.7.3...v1.7.4)
+## [v1.7.5](https://github.com/skilar/snapszhot/compare/v1.7.4...v1.7.5)
+
+-   Bump dependencies [`93bccc2`](https://github.com/skilar/snapszhot/commit/93bccc2dc024cf000df4060172706e996c085a13)
+-   Add 404 page [`6118403`](https://github.com/skilar/snapszhot/commit/611840352c2c99b5bb3b8225ab5b25de82819b4b)
+-   Fix original title [`ae947a4`](https://github.com/skilar/snapszhot/commit/ae947a4f165f3974f54361f9d9c948134190fa94)
+
+## [v1.7.4](https://github.com/skilar/snapszhot/compare/v1.7.3...v1.7.4) (31 July 2022)
 
 -   Get prefill file path within getStaticProps [`001b700`](https://github.com/skilar/snapszhot/commit/001b700b2da2a35769158c494de574aacf5c4cfa)
 
