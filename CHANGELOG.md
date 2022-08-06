@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.8.3](https://github.com/skilar/snapszhot/compare/v1.8.2...v1.8.3)
+## [v1.8.4](https://github.com/skilar/snapszhot/compare/v1.8.3...v1.8.4)
+
+-   Update csv [`237fe77`](https://github.com/skilar/snapszhot/commit/237fe770246a2e6d061aab3f4f30aeb0cbb96a67)
+-   Add unused csv [`ba6e982`](https://github.com/skilar/snapszhot/commit/ba6e982491676091ba734fc124f111ec66b81c75)
+
+## [v1.8.3](https://github.com/skilar/snapszhot/compare/v1.8.2...v1.8.3) (6 August 2022)
 
 -   Update prefills file path [`e2f1c44`](https://github.com/skilar/snapszhot/commit/e2f1c44ee84ff92dd85d779802a6f6da4315b68e)
 
