@@ -1,5 +1,4 @@
 import path from 'path'
-import { PREFILL_FILE_PATH } from '@lib/constants'
 import getPrefills from '@lib/get-prefills'
 import { getAllMovies, getSingleMovie } from '@lib/prismic'
 
@@ -12,7 +11,10 @@ export default function DayPage(props) {
 export async function getStaticProps({ params, preview = false, previewData }) {
     // We have to load this file within getStaticProps itself because of some weird
     // Next.js requirement. See https://github.com/vercel/next.js/discussions/32236#discussioncomment-3202094
-    const dataPath = path.join(process.cwd(), PREFILL_FILE_PATH)
+    const dataPath = path.join(
+        process.cwd(),
+        'public/prefills/2022-08-06-update.csv'
+    )
     const [post, mostRecentDay, prefills] = await Promise.all([
         getSingleMovie(previewData, parseInt(params.day)),
         getSingleMovie(),

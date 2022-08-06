@@ -2,7 +2,6 @@ import path from 'path'
 import PropTypes from 'prop-types'
 import { SWRConfig } from 'swr'
 
-import { PREFILL_FILE_PATH } from '@lib/constants'
 import getPrefills from '@lib/get-prefills'
 import { getSingleMovie } from '@lib/prismic'
 
@@ -23,7 +22,10 @@ HomePage.propTypes = {
 export async function getStaticProps({ preview = false }) {
     // We have to load this file within getStaticProps itself because of some weird
     // Next.js requirement. See https://github.com/vercel/next.js/discussions/32236#discussioncomment-3202094
-    const dataPath = path.join(process.cwd(), PREFILL_FILE_PATH)
+    const dataPath = path.join(
+        process.cwd(),
+        'public/prefills/2022-08-06-update.csv'
+    )
     const [fallback, prefills] = await Promise.all([
         getSingleMovie(),
         getPrefills(dataPath),
