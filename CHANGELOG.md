@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.8.4](https://github.com/skilar/snapszhot/compare/v1.8.3...v1.8.4)
+## [v1.8.5](https://github.com/skilar/snapszhot/compare/v1.8.4...v1.8.5)
+
+-   Fix image field priority [`02dddea`](https://github.com/skilar/snapszhot/commit/02dddeadcee719a376f357644f98f1ea727d0bd3)
+
+## [v1.8.4](https://github.com/skilar/snapszhot/compare/v1.8.3...v1.8.4) (6 August 2022)
 
 -   Update csv [`237fe77`](https://github.com/skilar/snapszhot/commit/237fe770246a2e6d061aab3f4f30aeb0cbb96a67)
 -   Add unused csv [`ba6e982`](https://github.com/skilar/snapszhot/commit/ba6e982491676091ba734fc124f111ec66b81c75)
