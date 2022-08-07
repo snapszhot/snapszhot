@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.8.5](https://github.com/skilar/snapszhot/compare/v1.8.4...v1.8.5)
+## [v1.8.6](https://github.com/skilar/snapszhot/compare/v1.8.5...v1.8.6)
+
+-   Update prefill file [`85a56a0`](https://github.com/skilar/snapszhot/commit/85a56a005dfdd9f00df5201adb93caf934c1b3e3)
+
+## [v1.8.5](https://github.com/skilar/snapszhot/compare/v1.8.4...v1.8.5) (6 August 2022)
 
 -   Fix image field priority [`02dddea`](https://github.com/skilar/snapszhot/commit/02dddeadcee719a376f357644f98f1ea727d0bd3)
 
