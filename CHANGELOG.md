@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.9.0](https://github.com/skilar/snapszhot/compare/v1.8.6...v1.9.0)
+## [v1.9.1](https://github.com/skilar/snapszhot/compare/v1.9.0...v1.9.1)
+
+-   Normalize quotes and smart quotes in search [`90882fa`](https://github.com/skilar/snapszhot/commit/90882fab785b7be7f8b7cac550d9383966bb4a44)
+-   Update earliest game in getRandomLink [`e91dc1a`](https://github.com/skilar/snapszhot/commit/e91dc1a0d766604f8afd874ac2389b77e00220d4)
+
+## [v1.9.0](https://github.com/skilar/snapszhot/compare/v1.8.6...v1.9.0) (8 August 2022)
 
 -   Use new title fields in &lt;Results /&gt; component [`bdcac1f`](https://github.com/skilar/snapszhot/commit/bdcac1f9f8feedc62daa2811a961fb6fcb760c75)
 -   Normalize dashes [`7aabc8f`](https://github.com/skilar/snapszhot/commit/7aabc8f6aaa1357db92b2cdf0cee1c2fb924641a)
