@@ -7,6 +7,7 @@ const normalizeString = string =>
         .toLowerCase()
         .normalize('NFKD')
         .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[-]/g, ' ')
 
 export default function Prefill({
     handlePrefillSelect,
