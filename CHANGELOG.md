@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.9.1](https://github.com/skilar/snapszhot/compare/v1.9.0...v1.9.1)
+## [v1.9.2](https://github.com/skilar/snapszhot/compare/v1.9.1...v1.9.2)
+
+-   Fix result title alignment [`5fc0d2b`](https://github.com/skilar/snapszhot/commit/5fc0d2b109d50fb4fb62b57dc09a4d54e0e909db)
+
+## [v1.9.1](https://github.com/skilar/snapszhot/compare/v1.9.0...v1.9.1) (8 August 2022)
 
 -   Normalize quotes and smart quotes in search [`90882fa`](https://github.com/skilar/snapszhot/commit/90882fab785b7be7f8b7cac550d9383966bb4a44)
 -   Update earliest game in getRandomLink [`e91dc1a`](https://github.com/skilar/snapszhot/commit/e91dc1a0d766604f8afd874ac2389b77e00220d4)
