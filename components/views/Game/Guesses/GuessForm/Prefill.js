@@ -8,6 +8,8 @@ const normalizeString = string =>
         .normalize('NFKD')
         .replace(/[\u0300-\u036f]/g, '')
         .replace(/[-]/g, ' ')
+        .replace(/['‘’]/g, "'")
+        .replace(/["”“]/g, '"')
 
 export default function Prefill({
     handlePrefillSelect,
@@ -39,7 +41,7 @@ export default function Prefill({
             toShow.push(option)
         }
 
-        if (toShow.length > 350) {
+        if (toShow.length > 300) {
             break
         }
     }
