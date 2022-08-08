@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.8.6](https://github.com/skilar/snapszhot/compare/v1.8.5...v1.8.6)
+## [v1.9.0](https://github.com/skilar/snapszhot/compare/v1.8.6...v1.9.0)
+
+-   Use new title fields in &lt;Results /&gt; component [`bdcac1f`](https://github.com/skilar/snapszhot/commit/bdcac1f9f8feedc62daa2811a961fb6fcb760c75)
+-   Normalize dashes [`7aabc8f`](https://github.com/skilar/snapszhot/commit/7aabc8f6aaa1357db92b2cdf0cee1c2fb924641a)
+
+## [v1.8.6](https://github.com/skilar/snapszhot/compare/v1.8.5...v1.8.6) (7 August 2022)
 
 -   Update prefill file [`85a56a0`](https://github.com/skilar/snapszhot/commit/85a56a005dfdd9f00df5201adb93caf934c1b3e3)
 
