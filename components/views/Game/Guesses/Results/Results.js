@@ -1,29 +1,15 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useGuessContext } from '@lib/use-guess-context'
+
+import CorrectAnswer from './CorrectAnswer'
 import Countdown from './Countdown'
 import styles from './Results.module.scss'
-
-function TitleGroup({ children }) {
-    return <span className={styles.titleGroup}>{children}</span>
-}
-
-TitleGroup.propTypes = {
-    children: PropTypes.node,
-}
-
-function AlternateTitle({ title }) {
-    return <span className={styles.altTitle}>[{title}]</span>
-}
-
-AlternateTitle.propTypes = {
-    title: PropTypes.string,
-}
 
 export default function Results({ day }) {
     const [copied, setCopied] = useState(false)
     const [cantCopy, setCantCopy] = useState(false)
-    const { answer, currentGuess, gameState } = useGuessContext()
+    const { currentGuess, gameState } = useGuessContext()
 
     let emoji = ''
     for (let i = 0; i < currentGuess - 1; i++) {
@@ -67,64 +53,7 @@ export default function Results({ day }) {
                     )}
                 </>
             ) : (
-                <>
-                    <h2 className={styles.shoulda}>The correct answer was</h2>
-                    <div>
-                        <span className={styles.correctTitle}>
-                            {answer?.originalTitle ? (
-                                <>
-                                    <TitleGroup>
-                                        <TitleGroup>
-                                            {answer.originalTitle}
-                                        </TitleGroup>
-                                        {answer?.originalTitlePhonetic && (
-                                            <AlternateTitle
-                                                title={
-                                                    answer.originalTitlePhonetic
-                                                }
-                                            />
-                                        )}
-                                    </TitleGroup>
-                                    <TitleGroup>
-                                        {answer?.altLangTitle && (
-                                            <AlternateTitle
-                                                title={answer.altLangTitle}
-                                            />
-                                        )}
-                                        {answer?.altLangTitlePhonetic && (
-                                            <AlternateTitle
-                                                title={
-                                                    answer.altLangTitlePhonetic
-                                                }
-                                            />
-                                        )}
-                                    </TitleGroup>
-                                    <TitleGroup>
-                                        {answer?.engTransTitle && (
-                                            <AlternateTitle
-                                                title={answer.engTransTitle}
-                                            />
-                                        )}
-                                        {answer?.altEngTitle && (
-                                            <AlternateTitle
-                                                title={answer.altEngTitle}
-                                            />
-                                        )}
-                                    </TitleGroup>
-                                </>
-                            ) : (
-                                answer.movie
-                            )}
-                            <span className={styles.year}>
-                                {' '}
-                                {answer.releaseYear}
-                            </span>
-                        </span>
-                        <span className={styles.director}>
-                            Directed by {answer.director}
-                        </span>
-                    </div>
-                </>
+                <CorrectAnswer />
             )}
             <Countdown />
         </div>

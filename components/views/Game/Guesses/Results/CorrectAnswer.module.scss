@@ -1,0 +1,41 @@
+.shoulda {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-sans-medium);
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.titles {
+    line-height: 1.3;
+    margin: var(--spacing-third) 0 var(--spacing-half);
+}
+
+.originalTitle {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-sans-bold);
+}
+
+.phoneticTitle {
+    color: var(--color-dark-grey);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: var(--spacing-quarter);
+}
+
+.alternates {
+    margin-top: var(--spacing-half);
+}
+
+.aka {
+    color: var(--color-dark-grey);
+}
+
+.alternateTitle {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-sans-bold);
+}
+
+.director {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-base);
+}
