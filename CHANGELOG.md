@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.9.2](https://github.com/skilar/snapszhot/compare/v1.9.1...v1.9.2)
+## [v1.9.3](https://github.com/skilar/snapszhot/compare/v1.9.2...v1.9.3)
+
+-   Add new title styling [`12f7185`](https://github.com/skilar/snapszhot/commit/12f71851cd33a3b80d5640dfb3929fbb89e4d296)
+
+## [v1.9.2](https://github.com/skilar/snapszhot/compare/v1.9.1...v1.9.2) (8 August 2022)
 
 -   Fix result title alignment [`5fc0d2b`](https://github.com/skilar/snapszhot/commit/5fc0d2b109d50fb4fb62b57dc09a4d54e0e909db)
 
