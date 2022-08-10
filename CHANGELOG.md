@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.9.3](https://github.com/skilar/snapszhot/compare/v1.9.2...v1.9.3)
+## [v1.9.4](https://github.com/skilar/snapszhot/compare/v1.9.3...v1.9.4)
+
+-   Update prefills [`2c4580e`](https://github.com/skilar/snapszhot/commit/2c4580efa7c503c80bd023ebc9fcb6dc75c3754e)
+-   Bump dependencies [`b6ec87b`](https://github.com/skilar/snapszhot/commit/b6ec87b821512c08784fb5bcd5bdabdc06060384)
+
+## [v1.9.3](https://github.com/skilar/snapszhot/compare/v1.9.2...v1.9.3) (8 August 2022)
 
 -   Add new title styling [`12f7185`](https://github.com/skilar/snapszhot/commit/12f71851cd33a3b80d5640dfb3929fbb89e4d296)
 
