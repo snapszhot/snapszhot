@@ -13,7 +13,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
     // Next.js requirement. See https://github.com/vercel/next.js/discussions/32236#discussioncomment-3202094
     const dataPath = path.join(
         process.cwd(),
-        'public/prefills/2022-08-09-update.csv'
+        'public/prefills/2022-08-10-update-2.csv'
     )
     const [post, mostRecentDay, prefills] = await Promise.all([
         getSingleMovie(previewData, parseInt(params.day)),
