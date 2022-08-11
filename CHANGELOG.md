@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.9.4](https://github.com/skilar/snapszhot/compare/v1.9.3...v1.9.4)
+## [v1.9.5](https://github.com/skilar/snapszhot/compare/v1.9.4...v1.9.5)
+
+-   Update prefills [`1b65071`](https://github.com/skilar/snapszhot/commit/1b6507152ec211bc9ee83aa21c6f7f24413d840a)
+
+## [v1.9.4](https://github.com/skilar/snapszhot/compare/v1.9.3...v1.9.4) (10 August 2022)
 
 -   Update prefills [`2c4580e`](https://github.com/skilar/snapszhot/commit/2c4580efa7c503c80bd023ebc9fcb6dc75c3754e)
 -   Bump dependencies [`b6ec87b`](https://github.com/skilar/snapszhot/commit/b6ec87b821512c08784fb5bcd5bdabdc06060384)
