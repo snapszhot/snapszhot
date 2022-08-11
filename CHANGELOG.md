@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.9.6](https://github.com/skilar/snapszhot/compare/v1.9.5...v1.9.6)
+## [v1.10.0](https://github.com/skilar/snapszhot/compare/v1.9.6...v1.10.0)
+
+-   Improve prefill matching [`6747011`](https://github.com/skilar/snapszhot/commit/674701139a31892b3843c84e08b86ddae5a318bd)
+
+## [v1.9.6](https://github.com/skilar/snapszhot/compare/v1.9.5...v1.9.6) (10 August 2022)
 
 -   Fix game init during preview mode [`97bf644`](https://github.com/skilar/snapszhot/commit/97bf64480a46dfc899b0638f56347633cffc96c5)
 
