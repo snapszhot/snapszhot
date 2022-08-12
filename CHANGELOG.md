@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.10.0](https://github.com/skilar/snapszhot/compare/v1.9.6...v1.10.0)
+## [v1.11.0](https://github.com/skilar/snapszhot/compare/v1.10.0...v1.11.0)
+
+-   Switch from csv-parser to csv-parse [`5f5cccc`](https://github.com/skilar/snapszhot/commit/5f5cccc976a624d0d6543fb77d747736af2554b4)
+-   Bump dependencies [`e81add0`](https://github.com/skilar/snapszhot/commit/e81add04914a93c647e356c0803f707cb2eca251)
+
+## [v1.10.0](https://github.com/skilar/snapszhot/compare/v1.9.6...v1.10.0) (11 August 2022)
 
 -   Improve prefill matching [`6747011`](https://github.com/skilar/snapszhot/commit/674701139a31892b3843c84e08b86ddae5a318bd)
 
