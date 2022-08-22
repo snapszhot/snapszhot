@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.11.0](https://github.com/skilar/snapszhot/compare/v1.10.0...v1.11.0)
+## [v1.11.1](https://github.com/skilar/snapszhot/compare/v1.11.0...v1.11.1)
+
+-   Update prefills [`121aff3`](https://github.com/skilar/snapszhot/commit/121aff33910868afda76d857e22967b1cd47735d)
+-   Bump dependencies [`e65ba0e`](https://github.com/skilar/snapszhot/commit/e65ba0e00676385fcdf27caa1104f8e5dc6a319d)
+-   Change phonetic title font size [`4fbf1fa`](https://github.com/skilar/snapszhot/commit/4fbf1faeaf8d303de92b0fa51e32898a2173a947)
+
+## [v1.11.0](https://github.com/skilar/snapszhot/compare/v1.10.0...v1.11.0) (11 August 2022)
 
 -   Switch from csv-parser to csv-parse [`5f5cccc`](https://github.com/skilar/snapszhot/commit/5f5cccc976a624d0d6543fb77d747736af2554b4)
 -   Bump dependencies [`e81add0`](https://github.com/skilar/snapszhot/commit/e81add04914a93c647e356c0803f707cb2eca251)
