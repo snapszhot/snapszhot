@@ -22,9 +22,11 @@ export default function Prefill({
         const option = options[i]
 
         if (
-            option.movieNorm.includes(valueNormalized) ||
-            option.directorNorm.includes(valueNormalized) ||
-            option.originalTitleNorm.includes(valueNormalized)
+            option.originalTitleNorm.includes(valueNormalized) ||
+            option.altLangTitleNorm.includes(valueNormalized) ||
+            option.engTransTitleNorm.includes(valueNormalized) ||
+            option.altEngTitleNorm.includes(valueNormalized) ||
+            option.directorNorm.includes(valueNormalized)
         ) {
             toShow.push(option)
         }

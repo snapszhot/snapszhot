@@ -20,16 +20,20 @@ export default function GuessForm({ options }) {
     } = useGuessContext()
 
     const initialValues = {
+        altEngTitle: '',
+        altLangTitle: '',
+        altLangTitlePhonetic: '',
         director: '',
+        engTransTitle: '',
         guess: '',
-        movie: '',
+        originalTitlePhonetic: '',
         releaseYear: '',
     }
 
     const handleSubmit = (values, { resetForm }) => {
         const numberOfGuesses = currentGuess + 1
         const playerWon =
-            values.guess === answer.movie &&
+            values.guess === answer.originalTitle &&
             values.director === answer.director &&
             values.releaseYear === answer.releaseYear
         const playerLost = numberOfGuesses === 6 && !playerWon
@@ -74,8 +78,7 @@ export default function GuessForm({ options }) {
             {
                 ...values,
                 isCorrect: playerWon,
-                movie: values.guess,
-                originalTitle: values.originalTitle,
+                originalTitle: values.guess,
             },
         ])
         setCurrentGuess(numberOfGuesses)

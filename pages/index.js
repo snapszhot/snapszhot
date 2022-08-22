@@ -24,7 +24,7 @@ export async function getStaticProps({ preview = false }) {
     // Next.js requirement. See https://github.com/vercel/next.js/discussions/32236#discussioncomment-3202094
     const dataPath = path.join(
         process.cwd(),
-        'public/prefills/2022-08-20-clean-encoding.csv'
+        'public/prefills/2022-08-20-giant-six-field-file.csv'
     )
     const [fallback, prefills] = await Promise.all([
         getSingleMovie(),
