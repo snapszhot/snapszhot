@@ -1,4 +1,6 @@
-import { getAllMovies, getPrismicPrefills, getSingleMovie } from '@lib/prismic'
+import path from 'path'
+import getPrefills from '@lib/get-prefills'
+import { getAllMovies, getSingleMovie } from '@lib/prismic'
 
 import { Game } from '@components/views'
 
@@ -7,10 +9,16 @@ export default function DayPage(props) {
 }
 
 export async function getStaticProps({ params, preview = false, previewData }) {
+    // We have to load this file within getStaticProps itself because of some weird
+    // Next.js requirement. See https://github.com/vercel/next.js/discussions/32236#discussioncomment-3202094
+    const dataPath = path.join(
+        process.cwd(),
+        'public/prefills/2022-08-20-giant-six-field-file.csv'
+    )
     const [post, mostRecentDay, prefills] = await Promise.all([
         getSingleMovie(previewData, parseInt(params.day)),
         getSingleMovie(),
-        getPrismicPrefills(),
+        getPrefills(dataPath),
     ])
 
     const { day, images, subtitle } = post
