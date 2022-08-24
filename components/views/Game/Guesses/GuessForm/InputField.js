@@ -18,13 +18,9 @@ export default function InputField({ name, options }) {
         event.preventDefault()
         const { value } = event.target
         setValues({
-            altEngTitle: '',
-            altLangTitle: '',
-            altLangTitlePhonetic: '',
-            director: '',
-            engTransTitle: '',
             guess: value,
-            originalTitlePhonetic: '',
+            director: '',
+            originalTitle: '',
             releaseYear: '',
         })
         setShowPrefill(value !== '')
@@ -32,13 +28,9 @@ export default function InputField({ name, options }) {
 
     const handlePrefillSelect = item => {
         setValues({
-            altEngTitle: item.altEngTitle,
-            altLangTitle: item.altLangTitle,
-            altLangTitlePhonetic: item.altLangTitlePhonetic,
+            guess: item.movie,
             director: item.director,
-            engTransTitle: item.engTransTitle,
-            guess: item.originalTitle,
-            originalTitlePhonetic: item.originalTitlePhonetic,
+            originalTitle: item.originalTitle,
             releaseYear: item.releaseYear,
         })
         setShowPrefill(false)

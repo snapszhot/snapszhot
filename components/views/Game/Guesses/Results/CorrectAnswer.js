@@ -12,42 +12,55 @@ export default function CorrectAnswer() {
         <div>
             <h2 className={styles.shoulda}>The correct answer was</h2>
             <div className={styles.titles}>
-                <div className={styles.originalTitle}>
-                    {answer.originalTitle}
-                </div>
-                {answer?.originalTitlePhonetic && (
-                    <div className={styles.phoneticTitle}>
-                        [{answer.originalTitlePhonetic}]
-                    </div>
-                )}
-                {hasAlternateTitle && (
-                    <div className={styles.alternates}>
-                        <div className={styles.aka}>aka</div>
-                        {answer?.altLangTitle && (
-                            <>
-                                <div className={styles.alternateTitle}>
-                                    {answer.altLangTitle}
-                                </div>
-                                {answer?.altLangTitlePhonetic && (
-                                    <div className={styles.phoneticTitle}>
-                                        [{answer.altLangTitlePhonetic}]
+                {answer?.originalTitle ? (
+                    <>
+                        <div className={styles.originalTitle}>
+                            {answer.originalTitle}
+                        </div>
+                        {answer?.originalTitlePhonetic && (
+                            <div className={styles.phoneticTitle}>
+                                [{answer.originalTitlePhonetic}]
+                            </div>
+                        )}
+
+                        {hasAlternateTitle && (
+                            <div className={styles.alternates}>
+                                <div className={styles.aka}>aka</div>
+                                {answer?.altLangTitle && (
+                                    <>
+                                        <div className={styles.alternateTitle}>
+                                            {answer.altLangTitle}
+                                        </div>
+                                        {answer?.altLangTitlePhonetic && (
+                                            <div
+                                                className={styles.phoneticTitle}
+                                            >
+                                                [{answer.altLangTitlePhonetic}]
+                                            </div>
+                                        )}
+                                    </>
+                                )}
+                                {hasFirstOr && (
+                                    <div className={styles.aka}>or</div>
+                                )}
+                                {answer?.engTransTitle && (
+                                    <div className={styles.alternateTitle}>
+                                        {answer.engTransTitle}
                                     </div>
                                 )}
-                            </>
-                        )}
-                        {hasFirstOr && <div className={styles.aka}>or</div>}
-                        {answer?.engTransTitle && (
-                            <div className={styles.alternateTitle}>
-                                {answer.engTransTitle}
+                                {hasSecondOr && (
+                                    <div className={styles.aka}>or</div>
+                                )}
+                                {answer?.altEngTitle && (
+                                    <div className={styles.alternateTitle}>
+                                        {answer.altEngTitle}
+                                    </div>
+                                )}
                             </div>
                         )}
-                        {hasSecondOr && <div className={styles.aka}>or</div>}
-                        {answer?.altEngTitle && (
-                            <div className={styles.alternateTitle}>
-                                {answer.altEngTitle}
-                            </div>
-                        )}
-                    </div>
+                    </>
+                ) : (
+                    <div className={styles.originalTitle}>{answer.movie}</div>
                 )}
             </div>
             <div className={styles.director}>
