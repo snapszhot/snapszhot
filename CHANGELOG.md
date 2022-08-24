@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.12.1](https://github.com/skilar/snapszhot/compare/v1.12.0...v1.12.1)
+## [v1.12.2](https://github.com/skilar/snapszhot/compare/v1.12.1...v1.12.2)
+
+-   Revert six-field prefill file [`993ee43`](https://github.com/skilar/snapszhot/commit/993ee43cf433b5513f1cd57d5fc0c4a323f191f2)
+
+## [v1.12.1](https://github.com/skilar/snapszhot/compare/v1.12.0...v1.12.1) (23 August 2022)
 
 -   Revert Prismic prefill file [`e682c1d`](https://github.com/skilar/snapszhot/commit/e682c1d049d21e8a60e2d1e33f315b0e1851eda2)
 
