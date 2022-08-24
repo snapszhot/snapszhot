@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.11.1](https://github.com/skilar/snapszhot/compare/v1.11.0...v1.11.1)
+## [v1.12.0](https://github.com/skilar/snapszhot/compare/v1.11.1...v1.12.0)
+
+-   Switch to six-field prefill file [`1eb7a9a`](https://github.com/skilar/snapszhot/commit/1eb7a9a3a01a8470427f2be7b0b273baad29a96a)
+-   Bump dependencies [`ae52923`](https://github.com/skilar/snapszhot/commit/ae5292331267f9eea071a530a84e7f14de6e960a)
+-   Fetch prefills from Prismic [`0d52090`](https://github.com/skilar/snapszhot/commit/0d520900c8277a5f626a66a381407900cf66e27d)
+
+## [v1.11.1](https://github.com/skilar/snapszhot/compare/v1.11.0...v1.11.1) (21 August 2022)
 
 -   Update prefills [`121aff3`](https://github.com/skilar/snapszhot/commit/121aff33910868afda76d857e22967b1cd47735d)
 -   Bump dependencies [`e65ba0e`](https://github.com/skilar/snapszhot/commit/e65ba0e00676385fcdf27caa1104f8e5dc6a319d)
