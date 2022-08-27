@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.12.2](https://github.com/skilar/snapszhot/compare/v1.12.1...v1.12.2)
+## [v1.13.0](https://github.com/skilar/snapszhot/compare/v1.12.2...v1.13.0)
+
+-   Use Prismic prefill file [`7d72e56`](https://github.com/skilar/snapszhot/commit/7d72e566173b1788b50e99b6c7ff2d3e608cef73)
+-   Normalize contractions [`ddc1caf`](https://github.com/skilar/snapszhot/commit/ddc1caf75418963ab7995f956a023521623e8958)
+
+## [v1.12.2](https://github.com/skilar/snapszhot/compare/v1.12.1...v1.12.2) (23 August 2022)
 
 -   Revert six-field prefill file [`993ee43`](https://github.com/skilar/snapszhot/commit/993ee43cf433b5513f1cd57d5fc0c4a323f191f2)
 
