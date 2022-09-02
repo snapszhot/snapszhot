@@ -18,7 +18,7 @@ export default function Game({
     return (
         <GuessContextProvider answer={answer} day={day} preview={preview}>
             <Container day={day} preview={preview} {...props}>
-                <CenteredWrapper>
+                <CenteredWrapper padding='0 var(--spacing-single) var(--spacing-half)'>
                     <h1>
                         <span className={styles.day}>Day {day}</span>
                         <span className={styles.hintTitle}>“{subtitle}”</span>

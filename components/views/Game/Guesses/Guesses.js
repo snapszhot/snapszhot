@@ -11,7 +11,7 @@ export default function Guesses({ day, prefills }) {
     const { gameState } = useGuessContext()
 
     return (
-        <CenteredWrapper padding='var(--spacing-single) var(--spacing-single) var(--spacing-triple)'>
+        <CenteredWrapper padding='var(--spacing-half) var(--spacing-single) var(--spacing-triple)'>
             <StepList />
             {gameState === 'in-progress' ? (
                 <GuessForm options={prefills} />

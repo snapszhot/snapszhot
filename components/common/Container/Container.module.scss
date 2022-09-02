@@ -16,9 +16,8 @@
 }
 
 .pageTitleWrapper {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
-    padding-bottom: var(--spacing-half);
 }
 
 .pageTitle {
