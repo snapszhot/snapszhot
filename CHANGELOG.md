@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.13.0](https://github.com/skilar/snapszhot/compare/v1.12.2...v1.13.0)
+## [v1.14.0](https://github.com/skilar/snapszhot/compare/v1.13.0...v1.14.0)
+
+-   Add director and year hints [`45cd2cd`](https://github.com/skilar/snapszhot/commit/45cd2cd218b19299d1002f76b9c5cd983aead012)
+-   Bump dependencies [`97ddecb`](https://github.com/skilar/snapszhot/commit/97ddecb5ae6a652883082e6417bda9ce55e6e291)
+
+## [v1.13.0](https://github.com/skilar/snapszhot/compare/v1.12.2...v1.13.0) (26 August 2022)
 
 -   Use Prismic prefill file [`7d72e56`](https://github.com/skilar/snapszhot/commit/7d72e566173b1788b50e99b6c7ff2d3e608cef73)
 -   Normalize contractions [`ddc1caf`](https://github.com/skilar/snapszhot/commit/ddc1caf75418963ab7995f956a023521623e8958)
