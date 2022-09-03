@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.14.0](https://github.com/skilar/snapszhot/compare/v1.13.0...v1.14.0)
+## [v1.14.1](https://github.com/skilar/snapszhot/compare/v1.14.0...v1.14.1)
+
+-   Normalize commas and dashes [`451b706`](https://github.com/skilar/snapszhot/commit/451b706f9c3fe7fc9fdbb74bde72a5f6aae3f947)
+
+## [v1.14.0](https://github.com/skilar/snapszhot/compare/v1.13.0...v1.14.0) (2 September 2022)
 
 -   Add director and year hints [`45cd2cd`](https://github.com/skilar/snapszhot/commit/45cd2cd218b19299d1002f76b9c5cd983aead012)
 -   Bump dependencies [`97ddecb`](https://github.com/skilar/snapszhot/commit/97ddecb5ae6a652883082e6417bda9ce55e6e291)
