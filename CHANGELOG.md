@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.14.1](https://github.com/skilar/snapszhot/compare/v1.14.0...v1.14.1)
+## [v1.14.2](https://github.com/skilar/snapszhot/compare/v1.14.1...v1.14.2)
+
+-   Bump dependencies [`6aedab5`](https://github.com/skilar/snapszhot/commit/6aedab5d379365a86453a09a55fa73bbd13b70a7)
+-   Improve fraction and hyphen matching [`b704d8f`](https://github.com/skilar/snapszhot/commit/b704d8f0e31014b622e77546e94cab50146b626b)
+
+## [v1.14.1](https://github.com/skilar/snapszhot/compare/v1.14.0...v1.14.1) (2 September 2022)
 
 -   Normalize commas and dashes [`451b706`](https://github.com/skilar/snapszhot/commit/451b706f9c3fe7fc9fdbb74bde72a5f6aae3f947)
 
