@@ -10,7 +10,7 @@
         "release": "dotenv -e .env.local release-it"
     },
     "dependencies": {
-        "@prismicio/client": "^6.7.0",
+        "@prismicio/client": "^6.7.1",
         "@supabase/supabase-js": "^1.35.6",
         "axios": "^0.27.2",
         "classnames": "^2.3.1",
@@ -18,7 +18,7 @@
         "formik": "^2.2.9",
         "image-size": "^1.0.2",
         "luxon": "^3.0.3",
-        "next": "^12.2.5",
+        "next": "^12.3.0",
         "next-seo": "^5.5.0",
         "prop-types": "^15.8.1",
         "react": "^18.2.0",
@@ -31,9 +31,9 @@
     "devDependencies": {
         "dotenv-cli": "^6.0.0",
         "eslint": "^8.23.0",
-        "eslint-config-next": "^12.2.5",
+        "eslint-config-next": "^12.3.0",
         "eslint-config-prettier": "^8.5.0",
-        "sass": "^1.54.8"
+        "sass": "^1.54.9"
     },
     "release-it": {
         "git": {
