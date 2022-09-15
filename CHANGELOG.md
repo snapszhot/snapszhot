@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.14.2](https://github.com/skilar/snapszhot/compare/v1.14.1...v1.14.2)
+## [v1.14.3](https://github.com/skilar/snapszhot/compare/v1.14.2...v1.14.3)
+
+-   Add new six-field file [`0201b29`](https://github.com/skilar/snapszhot/commit/0201b291b01bbe11ca77bee7f479c2df59d541ac)
+-   Bump dependencies [`c3b09ad`](https://github.com/skilar/snapszhot/commit/c3b09adf35680b430f110e0eb4b406df784690ae)
+
+## [v1.14.2](https://github.com/skilar/snapszhot/compare/v1.14.1...v1.14.2) (11 September 2022)
 
 -   Bump dependencies [`6aedab5`](https://github.com/skilar/snapszhot/commit/6aedab5d379365a86453a09a55fa73bbd13b70a7)
 -   Improve fraction and hyphen matching [`b704d8f`](https://github.com/skilar/snapszhot/commit/b704d8f0e31014b622e77546e94cab50146b626b)
