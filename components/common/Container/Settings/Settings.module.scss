@@ -41,4 +41,14 @@
             left: 20px;
         }
     }
+
+    &:disabled {
+        background-color: var(--color-light-grey);
+        border-color: var(--color-medium-grey);
+        box-shadow: inset -20px 0 0 0 var(--color-medium-grey);
+
+        &::after {
+            background-color: var(--color-light-grey);
+        }
+    }
 }

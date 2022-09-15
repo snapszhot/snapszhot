@@ -4,11 +4,12 @@ import { useGuessContext } from '@lib/use-guess-context'
 import { Modal } from '@components/common'
 import styles from './Settings.module.scss'
 
-function SettingToggle({ checked, id, label, onChange }) {
+function SettingToggle({ checked, disabled, id, label, onChange }) {
     return (
         <div className={styles.settingToggle}>
             <input
                 checked={checked}
+                disabled={disabled}
                 className={styles.settingToggleInput}
                 id={id}
                 onChange={onChange}
@@ -21,6 +22,7 @@ function SettingToggle({ checked, id, label, onChange }) {
 
 SettingToggle.propTypes = {
     checked: PropTypes.bool,
+    disabled: PropTypes.bool,
     id: PropTypes.string,
     label: PropTypes.string,
     onChange: PropTypes.func,
@@ -52,6 +54,12 @@ export default function Settings({ isOpen, toggleModal }) {
                         year: !enabledHints.year,
                     })
                 }
+            />
+            <SettingToggle
+                checked={false}
+                disabled={true}
+                id='subtitles'
+                label='Hide Subtitles (Coming Soon)'
             />
         </Modal>
     )
