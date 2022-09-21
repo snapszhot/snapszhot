@@ -1,12 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useField, useFormikContext } from 'formik'
+import axios from 'axios'
+import debouce from 'lodash.debounce'
 
+import { CircleLoader } from '@components/common'
 import Prefill from './Prefill'
 import styles from './InputField.module.scss'
 
-export default function InputField({ name, options }) {
+export default function InputField({ name }) {
     const [showPrefill, setShowPrefill] = useState(false)
+    const [options, setOptions] = useState(null)
+    const [loading, setLoading] = useState(false)
+
     const { setValues } = useFormikContext()
     const [field] = useField({
         id: name,
@@ -14,23 +20,61 @@ export default function InputField({ name, options }) {
         type: 'text',
     })
 
-    const handleChange = event => {
+    const searchAPI = async query => {
+        const { data } = await axios({
+            url: '/api/search',
+            method: 'GET',
+            params: { query },
+        })
+
+        setOptions(data)
+        setLoading(false)
+    }
+
+    const handleChange = async event => {
         event.preventDefault()
         const { value } = event.target
+        const hasValue = value !== ''
+
+        setLoading(true)
         setValues({
-            guess: value,
+            altEngTitle: '',
+            altLangTitle: '',
+            altLangTitlePhonetic: '',
             director: '',
-            originalTitle: '',
+            engTransTitle: '',
+            guess: value,
+            originalTitlePhonetic: '',
             releaseYear: '',
         })
-        setShowPrefill(value !== '')
+        setShowPrefill(hasValue)
+
+        if (hasValue) {
+            debouncedSearch(value)
+        } else {
+            setLoading(false)
+        }
     }
+
+    const debouncedSearch = useMemo(() => {
+        return debouce(searchAPI, 200)
+    }, [])
+
+    useEffect(() => {
+        return () => {
+            debouncedSearch.cancel()
+        }
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const handlePrefillSelect = item => {
         setValues({
-            guess: item.movie,
+            altEngTitle: item.altEngTitle,
+            altLangTitle: item.altLangTitle,
+            altLangTitlePhonetic: item.altLangTitlePhonetic,
             director: item.director,
-            originalTitle: item.originalTitle,
+            engTransTitle: item.engTransTitle,
+            guess: item.originalTitle,
+            originalTitlePhonetic: item.originalTitlePhonetic,
             releaseYear: item.releaseYear,
         })
         setShowPrefill(false)
@@ -38,13 +82,20 @@ export default function InputField({ name, options }) {
 
     return (
         <div className={styles.container}>
-            <input
-                className={styles.input}
-                placeholder='Search for a movie or director...'
-                type='text'
-                {...field}
-                onChange={handleChange}
-            />
+            <div>
+                <input
+                    className={styles.input}
+                    placeholder='Search for a movie or director...'
+                    type='text'
+                    {...field}
+                    onChange={handleChange}
+                />
+                {loading && (
+                    <div className={styles.loader}>
+                        <CircleLoader />
+                    </div>
+                )}
+            </div>
             <Prefill
                 handlePrefillSelect={handlePrefillSelect}
                 options={options}

@@ -1,4 +1,4 @@
-import { getAllMovies, getPrismicPrefills, getSingleMovie } from '@lib/prismic'
+import { getAllMovies, getSingleMovie } from '@lib/prismic'
 
 import { Game } from '@components/views'
 
@@ -7,10 +7,9 @@ export default function DayPage(props) {
 }
 
 export async function getStaticProps({ params, preview = false, previewData }) {
-    const [post, mostRecentDay, prefills] = await Promise.all([
+    const [post, mostRecentDay] = await Promise.all([
         getSingleMovie(previewData, parseInt(params.day)),
         getSingleMovie(),
-        getPrismicPrefills(),
     ])
 
     const { day, images, subtitle } = post
@@ -23,7 +22,6 @@ export async function getStaticProps({ params, preview = false, previewData }) {
             ogTitle: `DAY ${day} - SNAPSЖOT`,
             pageDescription: subtitle,
             pageTitle: `DAY ${day}: ${subtitle}`,
-            prefills,
             preview,
         },
         revalidate: 120,

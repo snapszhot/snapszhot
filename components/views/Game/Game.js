@@ -10,7 +10,6 @@ export default function Game({
     answer,
     day,
     images,
-    prefills,
     preview,
     subtitle,
     ...props
@@ -25,7 +24,7 @@ export default function Game({
                     </h1>
                 </CenteredWrapper>
                 <HintImages images={images} />
-                <Guesses day={day} prefills={prefills} />
+                <Guesses day={day} />
             </Container>
         </GuessContextProvider>
     )
@@ -35,7 +34,6 @@ Game.propTypes = {
     answer: PropTypes.object,
     day: PropTypes.number,
     images: PropTypes.array,
-    prefills: PropTypes.array,
     preview: PropTypes.bool,
     subtitle: PropTypes.string,
 }

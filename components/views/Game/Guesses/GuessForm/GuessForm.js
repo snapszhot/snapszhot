@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { Form, Formik } from 'formik'
 import axios from 'axios'
 import { useGuessContext } from '@lib/use-guess-context'
@@ -6,7 +5,7 @@ import { useGuessContext } from '@lib/use-guess-context'
 import InputField from './InputField'
 import styles from './GuessForm.module.scss'
 
-export default function GuessForm({ options }) {
+export default function GuessForm() {
     const {
         answer,
         currentGuess,
@@ -20,16 +19,20 @@ export default function GuessForm({ options }) {
     } = useGuessContext()
 
     const initialValues = {
+        altEngTitle: '',
+        altLangTitle: '',
+        altLangTitlePhonetic: '',
         director: '',
+        engTransTitle: '',
         guess: '',
-        movie: '',
+        originalTitlePhonetic: '',
         releaseYear: '',
     }
 
     const handleSubmit = (values, { resetForm }) => {
         const numberOfGuesses = currentGuess + 1
         const playerWon =
-            values.guess === answer.movie &&
+            values.guess === answer.originalTitle &&
             values.director === answer.director &&
             values.releaseYear === answer.releaseYear
         const playerLost = numberOfGuesses === 6 && !playerWon
@@ -46,7 +49,7 @@ export default function GuessForm({ options }) {
                 todaysGuesses: numberOfGuesses,
             })
             axios
-                .post('/api/supabase', {
+                .post('/api/game-stats', {
                     puzzle_id: day,
                     won: playerWon,
                     frame_won: numberOfGuesses,
@@ -74,8 +77,7 @@ export default function GuessForm({ options }) {
             {
                 ...values,
                 isCorrect: playerWon,
-                movie: values.guess,
-                originalTitle: values.originalTitle,
+                originalTitle: values.guess,
             },
         ])
         setCurrentGuess(numberOfGuesses)
@@ -88,7 +90,7 @@ export default function GuessForm({ options }) {
                 <Form>
                     <div className={styles.container}>
                         <div className={styles.inputField}>
-                            <InputField name='guess' options={options} />
+                            <InputField name='guess' />
                         </div>
                         <button className={styles.submit} type='submit'>
                             Submit
@@ -98,8 +100,4 @@ export default function GuessForm({ options }) {
             )}
         </Formik>
     )
-}
-
-GuessForm.propTypes = {
-    options: PropTypes.array,
 }

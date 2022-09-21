@@ -17,6 +17,7 @@
         "csv-parse": "^5.3.0",
         "formik": "^2.2.9",
         "image-size": "^1.0.2",
+        "lodash.debounce": "^4.0.8",
         "luxon": "^3.0.3",
         "next": "^12.3.0",
         "next-seo": "^5.5.0",

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { SWRConfig } from 'swr'
 
-import { getPrismicPrefills, getSingleMovie } from '@lib/prismic'
+import { getSingleMovie } from '@lib/prismic'
 
 import { GameWithSWR } from '@components/views'
 
@@ -18,10 +18,7 @@ HomePage.propTypes = {
 }
 
 export async function getStaticProps({ preview = false }) {
-    const [fallback, prefills] = await Promise.all([
-        getSingleMovie(),
-        getPrismicPrefills(),
-    ])
+    const fallback = await getSingleMovie()
 
     return {
         props: {
@@ -30,7 +27,6 @@ export async function getStaticProps({ preview = false }) {
             },
             mostRecentDay: fallback.day,
             ogImage: fallback.images[0].image.url,
-            prefills,
             preview,
         },
         revalidate: 60,
