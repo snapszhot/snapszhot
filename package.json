@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "@prismicio/client": "^6.7.1",
-        "@supabase/supabase-js": "^1.35.6",
+        "@supabase/supabase-js": "^1.35.7",
         "axios": "^0.27.2",
         "classnames": "^2.3.2",
         "csv-parse": "^5.3.0",
@@ -19,7 +19,7 @@
         "image-size": "^1.0.2",
         "lodash.debounce": "^4.0.8",
         "luxon": "^3.0.3",
-        "next": "^12.3.0",
+        "next": "^12.3.1",
         "next-seo": "^5.5.0",
         "prop-types": "^15.8.1",
         "react": "^18.2.0",
@@ -32,9 +32,9 @@
     "devDependencies": {
         "dotenv-cli": "^6.0.0",
         "eslint": "^8.23.1",
-        "eslint-config-next": "^12.3.0",
+        "eslint-config-next": "^12.3.1",
         "eslint-config-prettier": "^8.5.0",
-        "sass": "^1.54.9"
+        "sass": "^1.55.0"
     },
     "release-it": {
         "git": {
