@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { SWRConfig } from 'swr'
+import { captureException } from '@sentry/nextjs'
 
 import { getSingleMovie } from '@lib/prismic'
 
@@ -18,17 +19,22 @@ HomePage.propTypes = {
 }
 
 export async function getStaticProps({ preview = false }) {
-    const fallback = await getSingleMovie()
+    try {
+        const fallback = await getSingleMovie()
 
-    return {
-        props: {
-            fallback: {
-                '/': fallback,
+        return {
+            props: {
+                fallback: {
+                    '/': fallback,
+                },
+                mostRecentDay: fallback.day,
+                ogImage: fallback.images[0].image.url,
+                preview,
             },
-            mostRecentDay: fallback.day,
-            ogImage: fallback.images[0].image.url,
-            preview,
-        },
-        revalidate: 60,
+            revalidate: 60,
+        }
+    } catch (error) {
+        captureException(error)
+        throw error
     }
 }

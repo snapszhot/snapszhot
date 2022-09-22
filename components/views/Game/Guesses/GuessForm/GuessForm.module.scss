@@ -21,3 +21,9 @@
         background-color: var(--color-not-black);
     }
 }
+
+.error {
+    color: var(--color-red);
+    font-weight: var(--font-weight-sans-medium);
+    margin-top: var(--spacing-half);
+}

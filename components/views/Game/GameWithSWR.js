@@ -1,5 +1,6 @@
 import axios from 'axios'
 import useSWR from 'swr'
+import { captureException } from '@sentry/nextjs'
 import Game from './Game'
 
 const fetcher = async () => {
@@ -8,6 +9,8 @@ const fetcher = async () => {
 
         return data
     } catch (error) {
+        captureException(error)
+
         return error
     }
 }

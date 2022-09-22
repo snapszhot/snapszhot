@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
+import { captureException } from '@sentry/nextjs'
+
 import { useField, useFormikContext } from 'formik'
 import axios from 'axios'
 import debouce from 'lodash.debounce'
@@ -8,7 +10,7 @@ import { CircleLoader } from '@components/common'
 import Prefill from './Prefill'
 import styles from './InputField.module.scss'
 
-export default function InputField({ name }) {
+export default function InputField({ name, setError }) {
     const [showPrefill, setShowPrefill] = useState(false)
     const [options, setOptions] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -21,14 +23,21 @@ export default function InputField({ name }) {
     })
 
     const searchAPI = async query => {
-        const { data } = await axios({
-            url: '/api/search',
-            method: 'GET',
-            params: { query },
-        })
+        try {
+            const { data } = await axios({
+                url: '/api/search',
+                method: 'GET',
+                params: { query },
+            })
 
-        setOptions(data)
-        setLoading(false)
+            setOptions(data)
+            setError(false)
+            setLoading(false)
+        } catch (error) {
+            captureException(error)
+            setError(true)
+            setLoading(false)
+        }
     }
 
     const handleChange = async event => {
@@ -58,7 +67,7 @@ export default function InputField({ name }) {
 
     const debouncedSearch = useMemo(() => {
         return debouce(searchAPI, 200)
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         return () => {
@@ -109,4 +118,5 @@ export default function InputField({ name }) {
 InputField.propTypes = {
     name: PropTypes.string,
     options: PropTypes.array,
+    setError: PropTypes.func,
 }

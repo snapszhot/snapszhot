@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { Form, Formik } from 'formik'
 import axios from 'axios'
+import { captureException } from '@sentry/nextjs'
 import { useGuessContext } from '@lib/use-guess-context'
 
 import InputField from './InputField'
@@ -17,6 +19,7 @@ export default function GuessForm() {
         setGuesses,
         setStats,
     } = useGuessContext()
+    const [error, setError] = useState(false)
 
     const initialValues = {
         altEngTitle: '',
@@ -55,7 +58,7 @@ export default function GuessForm() {
                     frame_won: numberOfGuesses,
                 })
                 .catch(err => {
-                    console.log('axios error: ', err) // eslint-disable-line no-console
+                    captureException(err)
                 })
         }
 
@@ -90,12 +93,18 @@ export default function GuessForm() {
                 <Form>
                     <div className={styles.container}>
                         <div className={styles.inputField}>
-                            <InputField name='guess' />
+                            <InputField name='guess' setError={setError} />
                         </div>
                         <button className={styles.submit} type='submit'>
                             Submit
                         </button>
                     </div>
+                    {error && (
+                        <div className={styles.error}>
+                            We’re having some trouble searching. Please try
+                            again later.
+                        </div>
+                    )}
                 </Form>
             )}
         </Formik>
