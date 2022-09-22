@@ -68,7 +68,9 @@ export default function Container({
                                 <>{siteName}</>
                             )}
                         </div>
-                        <Nav day={day} mostRecentDay={mostRecentDay} />
+                        {mostRecentDay && (
+                            <Nav day={day} mostRecentDay={mostRecentDay} />
+                        )}
                     </div>
                 </CenteredWrapper>
             </header>
