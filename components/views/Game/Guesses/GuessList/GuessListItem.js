@@ -8,11 +8,20 @@ import styles from './GuessListItem.module.scss'
 
 function isWithinYearRange(guessYear, answerYear, yearRange) {
     const guessNum = parseInt(guessYear)
-    const answerNum = parseInt(answerYear)
-    const max = answerNum + yearRange
-    const min = answerNum - yearRange
+    const answerYears = answerYear.split(/[\/-]/)
 
-    return guessNum <= max && guessNum >= min
+    // We look at all the available years and create a big array
+    // with the proper range. Then we'll see if the guessed year
+    // is in that array.
+    const range = answerYears.flatMap(year => {
+        const yearInt = parseInt(year)
+        return Array.from(
+            new Array(yearRange * 2 + 1),
+            (x, i) => yearInt - yearRange + i
+        )
+    })
+
+    return range.includes(guessNum)
 }
 
 export default function GuessListItem({ guess }) {

@@ -7,6 +7,7 @@
     "rules": {
         "@next/next/no-img-element": "off",
         "no-console": "error",
+        "no-useless-escape": "off",
         "react/no-unused-prop-types": "error",
         "react/prop-types": "error"
     }
