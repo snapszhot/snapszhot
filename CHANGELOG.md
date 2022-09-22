@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.15.0](https://github.com/snapszhot/snapszhot/compare/v1.14.4...v1.15.0)
+## [v1.15.1](https://github.com/snapszhot/snapszhot/compare/v1.15.0...v1.15.1)
+
+-   Lower sentry trace rate [`58ee12f`](https://github.com/snapszhot/snapszhot/commit/58ee12f58f4f82a6919c5d75defb5090591d7ed3)
+
+## [v1.15.0](https://github.com/snapszhot/snapszhot/compare/v1.14.4...v1.15.0) (22 September 2022)
 
 -   Add supabase search [`88664c2`](https://github.com/snapszhot/snapszhot/commit/88664c2bc22136e738f0ec6049258bb71f506ffe)
 -   Add sentry.io [`8ce5ff3`](https://github.com/snapszhot/snapszhot/commit/8ce5ff3f8b277f2c14839d96803b8b6866659c3f)
