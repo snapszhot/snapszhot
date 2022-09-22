@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 import getRandomLink from '@lib/get-random-link'
@@ -20,13 +20,18 @@ export default function Nav({ day, mostRecentDay }) {
     const { pathname } = useRouter()
     const [settingsIsOpen, setSettingsIsOpen] = useState(false)
     const [statsIsOpen, setStatsIsOpen] = useState(false)
+    const [randomLink, setRandomLink] = useState('/archive')
     const toggleSettings = () => setSettingsIsOpen(!settingsIsOpen)
     const toggleStats = () => setStatsIsOpen(!statsIsOpen)
 
     const showGameNav = pathname !== '/archive'
     const prevLink = `/day/${day - 1}`
     const nextLink = `/day/${day + 1}`
-    const randomLink = getRandomLink({ day, mostRecentDay })
+
+    useEffect(() => {
+        const link = getRandomLink({ day, mostRecentDay })
+        setRandomLink(link)
+    }, [day, mostRecentDay])
 
     return (
         <div className={styles.container}>
