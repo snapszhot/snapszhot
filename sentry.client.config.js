@@ -10,6 +10,6 @@ Sentry.init({
     dsn:
         SENTRY_DSN ||
         'https://05148d8f39da4bf586424fb058531e34@o1421618.ingest.sentry.io/6767545',
-    tracesSampleRate: 1.0,
+    tracesSampleRate: 0.1,
     tunnel: '/api/tunnel',
 })
