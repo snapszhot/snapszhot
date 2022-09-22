@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.14.4](https://github.com/snapszhot/snapszhot/compare/v1.14.3...v1.14.4)
+## [v1.15.0](https://github.com/snapszhot/snapszhot/compare/v1.14.4...v1.15.0)
+
+-   Add supabase search [`88664c2`](https://github.com/snapszhot/snapszhot/commit/88664c2bc22136e738f0ec6049258bb71f506ffe)
+-   Add sentry.io [`8ce5ff3`](https://github.com/snapszhot/snapszhot/commit/8ce5ff3f8b277f2c14839d96803b8b6866659c3f)
+-   Bump dependencies [`67b4386`](https://github.com/snapszhot/snapszhot/commit/67b438641de62cc59f48fadf450f7a7b2aecd686)
+
+## [v1.14.4](https://github.com/snapszhot/snapszhot/compare/v1.14.3...v1.14.4) (15 September 2022)
 
 -   Add hide subtitle checkbox [`2d814a7`](https://github.com/snapszhot/snapszhot/commit/2d814a76c7a61f6db57f0dd62f4a72b9ccf18805)
 
