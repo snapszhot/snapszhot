@@ -24,7 +24,7 @@ export async function getStaticProps({ preview = false, previewData }) {
                 pageTitle: 'Archive',
                 preview,
             },
-            revalidate: 120,
+            revalidate: 60,
         }
     } catch (error) {
         captureException(error)

@@ -26,7 +26,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
                 pageTitle: `DAY ${day}: ${subtitle}`,
                 preview,
             },
-            revalidate: 120,
+            revalidate: 60,
         }
     } catch (error) {
         captureException(error)

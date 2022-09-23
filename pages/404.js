@@ -16,7 +16,7 @@ export async function getStaticProps() {
                 mostRecentDay: mostRecentDay.day,
                 pageTitle: '404! Page Not Found!',
             },
-            revalidate: 120,
+            revalidate: 60,
         }
     } catch (error) {
         captureException(error)
