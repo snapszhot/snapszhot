@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.15.1](https://github.com/snapszhot/snapszhot/compare/v1.15.0...v1.15.1)
+## [v1.16.0](https://github.com/snapszhot/snapszhot/compare/v1.15.1...v1.16.0)
+
+-   Add on-demand ISR [`937e9a3`](https://github.com/snapszhot/snapszhot/commit/937e9a3077ae2d6f7c38700511b9003e3b4f6adc)
+-   Fix page hydration [`35a09d6`](https://github.com/snapszhot/snapszhot/commit/35a09d64e5adec182636bb45b0a30449b170c79e)
+
+## [v1.15.1](https://github.com/snapszhot/snapszhot/compare/v1.15.0...v1.15.1) (22 September 2022)
 
 -   Lower sentry trace rate [`58ee12f`](https://github.com/snapszhot/snapszhot/commit/58ee12f58f4f82a6919c5d75defb5090591d7ed3)
 
