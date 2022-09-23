@@ -8,6 +8,7 @@ import styles from './Countdown.module.scss'
 export default function Countdown() {
     const [timeLeft, setTimeLeft] = useState(null)
     const router = useRouter()
+
     const nextMovie = DateTime.now()
         .setZone('America/New_York')
         .plus({ days: 1 })

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 
 import CenteredWrapper from '../CenteredWrapper'
@@ -8,6 +7,7 @@ import Nav from './Nav'
 import styles from './Container.module.scss'
 
 export default function Container({
+    canonical,
     children,
     day,
     mostRecentDay,
@@ -17,8 +17,6 @@ export default function Container({
     pageTitle,
     preview,
 }) {
-    const { asPath } = useRouter()
-
     const siteName = 'SNAPSЖOT'
     const description =
         pageDescription ||
@@ -26,9 +24,7 @@ export default function Container({
     const title = pageTitle
         ? `${pageTitle} - SNAPSЖOT`
         : `SNAPSЖOT: ${description}`
-    const canonical = `https://snapszhot.vercel.app${asPath}`
     const images = ogImage ? [{ url: ogImage }] : null
-    const showLink = asPath !== '/'
 
     return (
         <div className={styles.container}>
@@ -58,15 +54,9 @@ export default function Container({
                 <CenteredWrapper padding='var(--spacing-single)'>
                     <div className={styles.pageTitleWrapper}>
                         <div className={styles.pageTitle}>
-                            {showLink ? (
-                                <Link href='/'>
-                                    <a className={styles.titleLink}>
-                                        {siteName}
-                                    </a>
-                                </Link>
-                            ) : (
-                                <>{siteName}</>
-                            )}
+                            <Link href='/'>
+                                <a className={styles.titleLink}>{siteName}</a>
+                            </Link>
                         </div>
                         {mostRecentDay && (
                             <Nav day={day} mostRecentDay={mostRecentDay} />
@@ -80,6 +70,7 @@ export default function Container({
 }
 
 Container.propTypes = {
+    canonical: PropTypes.string,
     children: PropTypes.node,
     day: PropTypes.number,
     mostRecentDay: PropTypes.number,

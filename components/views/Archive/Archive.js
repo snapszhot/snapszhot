@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types'
 import { getPlayedGames } from '@lib/storage'
 import { GuessContextProvider } from '@lib/use-guess-context'
+import useHasMounted from '@lib/use-has-mounted'
 
 import { CenteredWrapper, Container } from '@components/common'
 import ArchivePost from './ArchivePost'
 
 export default function Archive({ posts, ...props }) {
-    const playedGames = getPlayedGames(true)
+    const hasMounted = useHasMounted()
+    const playedGames = getPlayedGames(true, hasMounted)
 
     return (
         <GuessContextProvider>

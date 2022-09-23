@@ -2,11 +2,13 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import getRandomLink from '@lib/get-random-link'
 import { GuessContextProvider } from '@lib/use-guess-context'
+import useHasMounted from '@lib/use-has-mounted'
 
 import { CenteredWrapper, Container } from '@components/common'
 
 export default function FourOhFour({ mostRecentDay, ...props }) {
-    const randomLink = getRandomLink({ mostRecentDay })
+    const hasMounted = useHasMounted()
+    const randomLink = getRandomLink({ hasMounted, mostRecentDay })
 
     return (
         <GuessContextProvider>
