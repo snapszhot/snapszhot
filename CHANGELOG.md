@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.16.0](https://github.com/snapszhot/snapszhot/compare/v1.15.1...v1.16.0)
+## [v1.16.1](https://github.com/snapszhot/snapszhot/compare/v1.16.0...v1.16.1)
+
+-   Bump dependencies [`da6250d`](https://github.com/snapszhot/snapszhot/commit/da6250dbc547f49682e5531dd819aa7ce8b0eb2f)
+-   Remove unused deps [`600079f`](https://github.com/snapszhot/snapszhot/commit/600079f6782fd1ad9212f03d2533efd3600db887)
+-   Fix Sentry API routes [`6eddcd9`](https://github.com/snapszhot/snapszhot/commit/6eddcd9950ee1cd7fcf0e982d216ec9f274c58f5)
+
+## [v1.16.0](https://github.com/snapszhot/snapszhot/compare/v1.15.1...v1.16.0) (23 September 2022)
 
 -   Add on-demand ISR [`937e9a3`](https://github.com/snapszhot/snapszhot/commit/937e9a3077ae2d6f7c38700511b9003e3b4f6adc)
 -   Fix page hydration [`35a09d6`](https://github.com/snapszhot/snapszhot/commit/35a09d64e5adec182636bb45b0a30449b170c79e)
