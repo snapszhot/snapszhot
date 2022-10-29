@@ -1,7 +1,6 @@
-import { withSentry } from '@sentry/nextjs'
 import supabase from '@lib/supabase-client'
 
-async function handler(req, res) {
+export default async function handler(req, res) {
     const isPreview =
         req?.cookies?.__next_preview_data != null &&
         req?.cookies?.__prerender_bypass != null
@@ -24,5 +23,3 @@ async function handler(req, res) {
 
     res.status(200).json({ message: 'Success!' })
 }
-
-export default withSentry(handler)

@@ -1,7 +1,6 @@
-import { withSentry } from '@sentry/nextjs'
 import supabase from '@lib/supabase-client'
 
-async function handler(req, res) {
+export default async function handler(req, res) {
     const { query } = req.query
     const cleanQuery =
         query.trim() !== '' ? `${query.trim().replace(/ /g, '+')}:*` : ''
@@ -30,5 +29,3 @@ async function handler(req, res) {
 
     res.status(200).json(formattedData)
 }
-
-export default withSentry(handler)

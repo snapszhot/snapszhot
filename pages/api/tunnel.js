@@ -1,4 +1,4 @@
-import { withSentry, captureException } from '@sentry/nextjs'
+import { captureException } from '@sentry/nextjs'
 import * as url from 'url'
 
 // Change host appropriately if you run your own Sentry instance.
@@ -8,7 +8,7 @@ const sentryHost = 'o1421618.ingest.sentry.io'
 // want to accept through this proxy.
 const knownProjectIds = ['6767545']
 
-async function handler(req, res) {
+export default async function handler(req, res) {
     try {
         const envelope = req.body
         const pieces = envelope.split('\n')
@@ -41,5 +41,3 @@ async function handler(req, res) {
         res.status(400).json({ status: 'invalid request' })
     }
 }
-
-export default withSentry(handler)
