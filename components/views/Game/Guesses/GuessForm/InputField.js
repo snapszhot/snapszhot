@@ -109,7 +109,6 @@ export default function InputField({ name, setError }) {
                 handlePrefillSelect={handlePrefillSelect}
                 options={options}
                 showPrefill={showPrefill}
-                value={field.value}
             />
         </div>
     )

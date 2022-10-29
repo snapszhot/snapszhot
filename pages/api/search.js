@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const cleanQuery =
         query.trim() !== '' ? `${query.trim().replace(/ /g, '+')}:*` : ''
 
-    const { data, error } = await supabase.rpc('search_unaccented_prefills', {
+    const { data, error } = await supabase.rpc('snapszhot_search', {
         query: cleanQuery,
     })
 
