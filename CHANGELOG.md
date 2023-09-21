@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.17.0](https://github.com/snapszhot/snapszhot/compare/v1.16.1...v1.17.0)
+## [v1.17.1](https://github.com/snapszhot/snapszhot/compare/v1.17.0...v1.17.1)
+
+-   Add scrollable modal [`4f08738`](https://github.com/snapszhot/snapszhot/commit/4f08738601878e3bbeaf651e40a879d855714064)
+
+## [v1.17.0](https://github.com/snapszhot/snapszhot/compare/v1.16.1...v1.17.0) (21 September 2023)
 
 -   Bump dependencies [`7c1fda8`](https://github.com/snapszhot/snapszhot/commit/7c1fda866f9076bc9ee019e58d20be1c1b3f6f33)
 -   Add info modal [`0e36f97`](https://github.com/snapszhot/snapszhot/commit/0e36f97c1fb8590c198a6040642f3f1c855f7a6b)
