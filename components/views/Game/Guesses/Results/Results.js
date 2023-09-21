@@ -20,7 +20,7 @@ export default function Results({ day }) {
         emoji += '⬛ '
     }
 
-    const clipboard = `SNAPSЖOT: DAY ${day}\n【Ж】${emoji}\n\nhttps://snapszhot.vercel.app`
+    const clipboard = `SNAPSЖOT: DAY ${day}\n【Ж】${emoji}\n\nhttps://snapgame.cc`
     const copyToClipboard = () => {
         navigator.clipboard.writeText(clipboard).then(
             () => {

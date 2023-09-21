@@ -19,7 +19,7 @@ export async function getStaticProps({ preview = false, previewData }) {
 
         return {
             props: {
-                canonical: 'https://snapszhot.vercel.app/archive',
+                canonical: 'https://snapgame.cc/archive',
                 posts,
                 mostRecentDay: mostRecentDay.day,
                 pageTitle: 'Archive',

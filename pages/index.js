@@ -14,7 +14,7 @@ export async function getStaticProps({ preview = false }) {
         return {
             props: {
                 ...post,
-                canonical: 'https://snapszhot.vercel.app',
+                canonical: 'https://snapgame.cc',
                 mostRecentDay: post.day,
                 ogImage: post.images[0].image.url,
                 preview,
