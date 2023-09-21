@@ -18,12 +18,8 @@ export default function Container({
     preview,
 }) {
     const siteName = 'SNAPSЖOT'
-    const description =
-        pageDescription ||
-        'swo17’s attempt at a more eclectic version of Framed'
-    const title = pageTitle
-        ? `${pageTitle} - SNAPSЖOT`
-        : `SNAPSЖOT: ${description}`
+    const description = pageDescription || ''
+    const title = pageTitle ? `${pageTitle} - SNAPSЖOT` : `SNAPSЖOT`
     const images = ogImage ? [{ url: ogImage }] : null
 
     return (
