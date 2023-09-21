@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.17.1](https://github.com/snapszhot/snapszhot/compare/v1.17.0...v1.17.1)
+## [v1.17.2](https://github.com/snapszhot/snapszhot/compare/v1.17.1...v1.17.2)
+
+-   Add new URL [`b096b11`](https://github.com/snapszhot/snapszhot/commit/b096b11344d3923880b70f85fc7dfc2677401e15)
+
+## [v1.17.1](https://github.com/snapszhot/snapszhot/compare/v1.17.0...v1.17.1) (21 September 2023)
 
 -   Add scrollable modal [`4f08738`](https://github.com/snapszhot/snapszhot/commit/4f08738601878e3bbeaf651e40a879d855714064)
 
