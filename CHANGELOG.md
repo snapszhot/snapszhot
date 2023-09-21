@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.16.1](https://github.com/snapszhot/snapszhot/compare/v1.16.0...v1.16.1)
+## [v1.17.0](https://github.com/snapszhot/snapszhot/compare/v1.16.1...v1.17.0)
+
+-   Bump dependencies [`7c1fda8`](https://github.com/snapszhot/snapszhot/commit/7c1fda866f9076bc9ee019e58d20be1c1b3f6f33)
+-   Add info modal [`0e36f97`](https://github.com/snapszhot/snapszhot/commit/0e36f97c1fb8590c198a6040642f3f1c855f7a6b)
+-   Remove description for homepage [`880e596`](https://github.com/snapszhot/snapszhot/commit/880e5962422a14252a229f6d58fff9842a070b85)
+
+## [v1.16.1](https://github.com/snapszhot/snapszhot/compare/v1.16.0...v1.16.1) (29 October 2022)
 
 -   Bump dependencies [`da6250d`](https://github.com/snapszhot/snapszhot/commit/da6250dbc547f49682e5531dd819aa7ce8b0eb2f)
 -   Remove unused deps [`600079f`](https://github.com/snapszhot/snapszhot/commit/600079f6782fd1ad9212f03d2533efd3600db887)
