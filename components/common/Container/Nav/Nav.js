@@ -6,21 +6,26 @@ import useHasMounted from '@lib/use-has-mounted'
 
 import {
     Archive,
+    Info as InfoIcon,
     Next,
     Previous,
     Random,
     Settings as SettingsIcon,
     Stats as StatsIcon,
 } from '@components/icons'
+import Info from '../Info'
 import Settings from '../Settings'
 import Stats from '../Stats'
 import NavIcon from './NavIcon'
+import NavModalTrigger from './NavModalTrigger'
 import styles from './Nav.module.scss'
 
 export default function Nav({ day, mostRecentDay }) {
     const { pathname } = useRouter()
+    const [infoIsOpen, setInfoIsOpen] = useState(false)
     const [settingsIsOpen, setSettingsIsOpen] = useState(false)
     const [statsIsOpen, setStatsIsOpen] = useState(false)
+    const toggleInfo = () => setInfoIsOpen(!infoIsOpen)
     const toggleSettings = () => setSettingsIsOpen(!settingsIsOpen)
     const toggleStats = () => setStatsIsOpen(!statsIsOpen)
 
@@ -52,27 +57,19 @@ export default function Nav({ day, mostRecentDay }) {
                 </NavIcon>
             </ul>
             <ul className={styles.nav}>
-                <li>
-                    <button
-                        className={styles.statsButton}
-                        onClick={toggleStats}
-                    >
-                        <span className='visuallyHidden'>Stats</span>
-                        <StatsIcon styles={styles.statsIcon} />
-                    </button>
-                </li>
-                <li>
-                    <button
-                        className={styles.statsButton}
-                        onClick={toggleSettings}
-                    >
-                        <span className='visuallyHidden'>Settings</span>
-                        <SettingsIcon styles={styles.settingsIcon} />
-                    </button>
-                </li>
+                <NavModalTrigger onClick={toggleStats} title='Stats'>
+                    <StatsIcon styles={styles.statsIcon} />
+                </NavModalTrigger>
+                <NavModalTrigger onClick={toggleSettings} title='Settings'>
+                    <SettingsIcon styles={styles.settingsIcon} />
+                </NavModalTrigger>
+                <NavModalTrigger onClick={toggleInfo} title='Info'>
+                    <InfoIcon styles={styles.infoIcon} />
+                </NavModalTrigger>
             </ul>
             <Stats isOpen={statsIsOpen} toggleModal={toggleStats} />
             <Settings isOpen={settingsIsOpen} toggleModal={toggleSettings} />
+            <Info isOpen={infoIsOpen} toggleModal={toggleInfo} />
         </div>
     )
 }

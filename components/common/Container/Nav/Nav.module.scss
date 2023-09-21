@@ -21,6 +21,7 @@
 }
 
 .icon,
+.infoIcon,
 .nextPrevIcon,
 .settingsIcon,
 .statsIcon {
@@ -29,6 +30,7 @@
 }
 
 .icon,
+.infoIcon,
 .nextPrevIcon,
 .settingsIcon {
     fill: var(--color-not-black);
@@ -54,10 +56,6 @@
     width: 16px;
 }
 
-.statsButton {
-    padding: 0;
-}
-
 .statsIcon {
     fill: none;
     stroke: var(--color-not-black);
@@ -65,5 +63,27 @@
 
     &:hover {
         stroke: var(--color-medium-grey);
+    }
+}
+
+.infoIcon {
+    height: 22px;
+    width: 22px;
+
+    &:hover {
+        :global(.line) {
+            stroke: var(--color-medium-grey);
+        }
+    }
+
+    :global(.circleBackground) {
+        fill: var(--color-white);
+    }
+
+    :global(.line) {
+        stroke: var(--color-not-black);
+        stroke-width: 65;
+        stroke-miterlimit: 10;
+        transition: all 300ms ease;
     }
 }
