@@ -1,20 +1,30 @@
 import PropTypes from 'prop-types'
 import ReactModal from 'react-modal'
+import cn from 'classnames'
 
 import styles from './Modal.module.scss'
 
 ReactModal.setAppElement('#__next')
 
-export default function Modal({ children, isOpen, title, toggleModal }) {
+export default function Modal({
+    children,
+    isOpen,
+    scrollable = false,
+    title,
+    toggleModal,
+}) {
     const modalStyles = {
         overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0.25)',
         },
     }
+    const className = cn(styles.modal, {
+        [styles.scrollable]: scrollable,
+    })
 
     return (
         <ReactModal
-            className={styles.modal}
+            className={className}
             contentLabel={title}
             isOpen={isOpen}
             onRequestClose={toggleModal}
@@ -34,6 +44,7 @@ export default function Modal({ children, isOpen, title, toggleModal }) {
 Modal.propTypes = {
     children: PropTypes.node,
     isOpen: PropTypes.bool,
+    scrollable: PropTypes.bool,
     toggleModal: PropTypes.func,
     title: PropTypes.string,
 }

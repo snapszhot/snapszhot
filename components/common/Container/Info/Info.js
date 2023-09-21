@@ -4,7 +4,12 @@ import { Modal } from '@components/common'
 
 export default function Settings({ isOpen, toggleModal }) {
     return (
-        <Modal isOpen={isOpen} title='Info' toggleModal={toggleModal}>
+        <Modal
+            isOpen={isOpen}
+            scrollable={true}
+            title='Info'
+            toggleModal={toggleModal}
+        >
             <p>
                 You have six chances to guess each day’s film based on a series
                 of image clues. In theory, the clues become more obvious toward

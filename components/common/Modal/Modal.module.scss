@@ -9,13 +9,20 @@
     min-height: 240px;
     outline: none;
     padding: var(--spacing-single);
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
 
     @include breakpoint('small') {
         max-width: 450px;
+    }
+
+    &.scrollable {
+        max-height: calc(100vh - 2rem);
+        overflow: scroll;
+        top: unset;
+        transform: translate(-50%, 1rem);
     }
 }
 
