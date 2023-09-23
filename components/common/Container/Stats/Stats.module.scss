@@ -1,4 +1,22 @@
 .stats {
+    border: 2px solid var(--color-light-grey);
+    border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.statsLinkContainer {
+    margin-top: var(--spacing-single);
+    text-align: center;
+}
+
+.statsLink {
+    border-radius: 4px;
+    color: var(--color-dark-grey);
+    font-weight: var(--font-weight-sans-bold);
+    margin-top: var(--spacing-half);
+    padding: var(--spacing-third) var(--spacing-half);
+    transition: all 300ms ease;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }

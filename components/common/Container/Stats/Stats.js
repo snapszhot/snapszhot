@@ -29,6 +29,14 @@ export default function Stats({ isOpen, toggleModal }) {
                 <StatItem number={stats?.maxStreak} title='Longest Streak' />
             </dl>
             <GuessGrid {...stats} />
+            <div className={styles.statsLinkContainer}>
+                <a
+                    className={styles.statsLink}
+                    href='https://snapszhot-stats.vercel.app'
+                >
+                    See how everyone else has done
+                </a>
+            </div>
         </Modal>
     )
 }

@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.share {
+%actionButton {
     background-color: var(--color-dark-grey);
     border-radius: 4px;
     color: var(--color-white);
@@ -18,6 +18,10 @@
     }
 }
 
+.share {
+    @extend %actionButton;
+}
+
 .toShare {
     border: 2px solid var(--color-light-grey);
     border-radius: 2px;
@@ -26,4 +30,14 @@
     margin-top: var(--spacing-single);
     padding: var(--spacing-half);
     white-space: pre-wrap;
+}
+
+.stats {
+    margin-top: var(--spacing-single);
+}
+
+.statsButton {
+    @extend %actionButton;
+    font-size: var(--font-size-normal);
+    text-decoration: none;
 }

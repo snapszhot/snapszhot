@@ -56,6 +56,14 @@ export default function Results({ day }) {
                 <CorrectAnswer />
             )}
             <Countdown />
+            <div className={styles.stats}>
+                <a
+                    className={styles.statsButton}
+                    href={`https://snapszhot-stats.vercel.app/day/${day}`}
+                >
+                    View the stats for day {day}
+                </a>
+            </div>
         </div>
     )
 }
