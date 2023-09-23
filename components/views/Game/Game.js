@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import { GuessContextProvider } from '@lib/use-guess-context'
 
-import { CenteredWrapper, Container } from '@components/common'
+import { Container } from '@components/common'
 import Guesses from './Guesses'
 import HintImages from './HintImages'
-import styles from './Game.module.scss'
+import Title from './Title'
 
 export default function Game({
     answer,
@@ -17,12 +17,7 @@ export default function Game({
     return (
         <GuessContextProvider answer={answer} day={day} preview={preview}>
             <Container day={day} preview={preview} {...props}>
-                <CenteredWrapper padding='0 var(--spacing-single) var(--spacing-half)'>
-                    <h1>
-                        <span className={styles.day}>Day {day}</span>
-                        <span className={styles.hintTitle}>“{subtitle}”</span>
-                    </h1>
-                </CenteredWrapper>
+                <Title day={day} subtitle={subtitle} />
                 <HintImages images={images} />
                 <Guesses day={day} />
             </Container>

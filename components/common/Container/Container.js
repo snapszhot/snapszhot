@@ -13,12 +13,10 @@ export default function Container({
     mostRecentDay,
     ogImage,
     ogTitle,
-    pageDescription,
     pageTitle,
     preview,
 }) {
     const siteName = 'SNAPSЖOT'
-    const description = pageDescription || ''
     const title = pageTitle ? `${pageTitle} - SNAPSЖOT` : `SNAPSЖOT`
     const images = ogImage ? [{ url: ogImage }] : null
 
@@ -34,7 +32,6 @@ export default function Container({
             )}
             <NextSeo
                 title={title}
-                description={description}
                 canonical={canonical}
                 openGraph={{
                     url: canonical,
@@ -72,7 +69,6 @@ Container.propTypes = {
     mostRecentDay: PropTypes.number,
     ogImage: PropTypes.string,
     ogTitle: PropTypes.string,
-    pageDescription: PropTypes.string,
     pageTitle: PropTypes.string,
     preview: PropTypes.bool,
 }

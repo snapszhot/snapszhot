@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import cn from 'classnames'
+import { useGuessContext } from '@lib/use-guess-context'
 import styles from './ArchivePost.module.scss'
 
 export default function ArchivePost({ day, isLast, result, subtitle }) {
+    const { enabledHints } = useGuessContext()
     const link = `/day/${day}`
     const won = result === 'won'
     const lost = result === 'lost'
@@ -18,10 +20,18 @@ export default function ArchivePost({ day, isLast, result, subtitle }) {
                 {lost && <>❌</>}
                 {won && <>✅</>}
             </span>
-            <span className={styles.day}>DAY {day}: </span>
-            <Link href={link}>
-                <a>{subtitle}</a>
-            </Link>
+            {enabledHints.subtitles ? (
+                <>
+                    <span className={styles.day}>DAY {day}: </span>
+                    <Link href={link}>
+                        <a>{subtitle}</a>
+                    </Link>
+                </>
+            ) : (
+                <Link href={link}>
+                    <a className={styles.day}>DAY {day}</a>
+                </Link>
+            )}
         </li>
     )
 }

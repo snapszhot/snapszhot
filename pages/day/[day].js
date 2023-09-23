@@ -14,7 +14,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
             getSingleMovie(),
         ])
 
-        const { day, images, subtitle } = post
+        const { day, images } = post
 
         return {
             props: {
@@ -23,8 +23,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
                 mostRecentDay: mostRecentDay.day,
                 ogImage: images[0].image.url,
                 ogTitle: `DAY ${day} - SNAPSЖOT`,
-                pageDescription: subtitle,
-                pageTitle: `DAY ${day}: ${subtitle}`,
+                pageTitle: `DAY ${day}`,
                 preview,
             },
             revalidate: 60,

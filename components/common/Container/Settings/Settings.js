@@ -56,10 +56,15 @@ export default function Settings({ isOpen, toggleModal }) {
                 }
             />
             <SettingToggle
-                checked={false}
-                disabled={true}
+                checked={enabledHints.subtitles}
                 id='subtitles'
-                label='Hide Subtitles (Coming Soon)'
+                label='Show Subtitles'
+                onChange={() =>
+                    setEnabledHints({
+                        ...enabledHints,
+                        subtitles: !enabledHints.subtitles,
+                    })
+                }
             />
         </Modal>
     )
