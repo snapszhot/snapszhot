@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.17.2](https://github.com/snapszhot/snapszhot/compare/v1.17.1...v1.17.2)
+## [v1.17.3](https://github.com/snapszhot/snapszhot/compare/v1.17.2...v1.17.3)
+
+-   Enable show/hide subtitles [`80c47bd`](https://github.com/snapszhot/snapszhot/commit/80c47bdd809a6348eba7b50cf41d97e9f476806a)
+-   Add links to stats [`a8145b1`](https://github.com/snapszhot/snapszhot/commit/a8145b1d65ff73288426a17e5136ac342a023483)
+-   Bump dependencies [`c9b28a3`](https://github.com/snapszhot/snapszhot/commit/c9b28a3b214ebcf806034706406fdd32359f8c4a)
+
+## [v1.17.2](https://github.com/snapszhot/snapszhot/compare/v1.17.1...v1.17.2) (21 September 2023)
 
 -   Add new URL [`b096b11`](https://github.com/snapszhot/snapszhot/commit/b096b11344d3923880b70f85fc7dfc2677401e15)
 
