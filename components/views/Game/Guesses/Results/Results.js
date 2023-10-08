@@ -61,7 +61,7 @@ export default function Results({ day }) {
                     className={styles.statsButton}
                     href={`https://snapszhot-stats.vercel.app/day/${day}`}
                 >
-                    View the stats for day {day}
+                    View the stats for DAY {day}
                 </a>
             </div>
         </div>
