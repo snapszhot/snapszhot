@@ -32,7 +32,7 @@ export default function Stats({ isOpen, toggleModal }) {
             <div className={styles.statsLinkContainer}>
                 <a
                     className={styles.statsLink}
-                    href='https://snapszhot-stats.vercel.app'
+                    href='https://snapszhot-stats.vercel.app/archive'
                 >
                     See how everyone else has done
                 </a>
