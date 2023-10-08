@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.17.4](https://github.com/snapszhot/snapszhot/compare/v1.17.3...v1.17.4)
+## [v1.17.5](https://github.com/snapszhot/snapszhot/compare/v1.17.4...v1.17.5)
+
+-   Fix lint [`d60b640`](https://github.com/snapszhot/snapszhot/commit/d60b640b1a91a885b2332f00bd54e663ab0d4d03)
+
+## [v1.17.4](https://github.com/snapszhot/snapszhot/compare/v1.17.3...v1.17.4) (8 October 2023)
 
 -   Bump dependencies [`61a2c9a`](https://github.com/snapszhot/snapszhot/commit/61a2c9adca5860e88c64fb3f0d708220172a0c37)
 -   Remove Next/Image [`28e68c9`](https://github.com/snapszhot/snapszhot/commit/28e68c9a519d2c7fc0cb87152db6bb9a780a66dd)
