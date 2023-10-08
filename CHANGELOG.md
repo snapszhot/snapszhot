@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.17.5](https://github.com/snapszhot/snapszhot/compare/v1.17.4...v1.17.5)
+## [v1.17.6](https://github.com/snapszhot/snapszhot/compare/v1.17.5...v1.17.6)
+
+-   Tweak capitalization [`226f4a2`](https://github.com/snapszhot/snapszhot/commit/226f4a271aee052789519345220a6c4e91fc94f8)
+-   Update link to stats archive [`878a03f`](https://github.com/snapszhot/snapszhot/commit/878a03ffce6dbf4b0c9984a3ca0de53b591a45e1)
+
+## [v1.17.5](https://github.com/snapszhot/snapszhot/compare/v1.17.4...v1.17.5) (8 October 2023)
 
 -   Fix lint [`d60b640`](https://github.com/snapszhot/snapszhot/commit/d60b640b1a91a885b2332f00bd54e663ab0d4d03)
 
