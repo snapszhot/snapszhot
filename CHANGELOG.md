@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.17.3](https://github.com/snapszhot/snapszhot/compare/v1.17.2...v1.17.3)
+## [v1.17.4](https://github.com/snapszhot/snapszhot/compare/v1.17.3...v1.17.4)
+
+-   Bump dependencies [`61a2c9a`](https://github.com/snapszhot/snapszhot/commit/61a2c9adca5860e88c64fb3f0d708220172a0c37)
+-   Remove Next/Image [`28e68c9`](https://github.com/snapszhot/snapszhot/commit/28e68c9a519d2c7fc0cb87152db6bb9a780a66dd)
+
+## [v1.17.3](https://github.com/snapszhot/snapszhot/compare/v1.17.2...v1.17.3) (23 September 2023)
 
 -   Enable show/hide subtitles [`80c47bd`](https://github.com/snapszhot/snapszhot/commit/80c47bdd809a6348eba7b50cf41d97e9f476806a)
 -   Add links to stats [`a8145b1`](https://github.com/snapszhot/snapszhot/commit/a8145b1d65ff73288426a17e5136ac342a023483)
