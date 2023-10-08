@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import Image from 'next/image'
 import { useGuessContext } from '@lib/use-guess-context'
 import styles from './HintImage.module.scss'
 
