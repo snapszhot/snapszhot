@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.17.6](https://github.com/snapszhot/snapszhot/compare/v1.17.5...v1.17.6)
+## [v1.17.7](https://github.com/snapszhot/snapszhot/compare/v1.17.6...v1.17.7)
+
+-   Bump dependencies [`5c9a19a`](https://github.com/snapszhot/snapszhot/commit/5c9a19a6902b18116d3762ce97a8d954e6285c17)
+-   Set fixed image height [`6880d29`](https://github.com/snapszhot/snapszhot/commit/6880d29c51765704b29be7f3266f9f990a73d662)
+
+## [v1.17.6](https://github.com/snapszhot/snapszhot/compare/v1.17.5...v1.17.6) (8 October 2023)
 
 -   Tweak capitalization [`226f4a2`](https://github.com/snapszhot/snapszhot/commit/226f4a271aee052789519345220a6c4e91fc94f8)
 -   Update link to stats archive [`878a03f`](https://github.com/snapszhot/snapszhot/commit/878a03ffce6dbf4b0c9984a3ca0de53b591a45e1)
