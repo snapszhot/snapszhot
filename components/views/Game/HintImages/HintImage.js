@@ -12,7 +12,13 @@ export default function HintImage({ dimensions, index, url }) {
     if (isDisplayed) {
         return (
             <div className={styles.container}>
-                <img alt='' height={MAX_HEIGHT} src={url} width={MAX_WIDTH} />
+                <img
+                    className={styles.image}
+                    alt=''
+                    height={MAX_HEIGHT}
+                    src={url}
+                    width={MAX_WIDTH}
+                />
             </div>
         )
     }
