@@ -17,6 +17,7 @@ export default function Container({
     preview,
 }) {
     const siteName = 'SNAPSЖOT'
+    const shortSiteName = 'Ж'
     const title = pageTitle ? `${pageTitle} - SNAPSЖOT` : `SNAPSЖOT`
     const images = ogImage ? [{ url: ogImage }] : null
 
@@ -48,7 +49,14 @@ export default function Container({
                     <div className={styles.pageTitleWrapper}>
                         <div className={styles.pageTitle}>
                             <Link href='/'>
-                                <a className={styles.titleLink}>{siteName}</a>
+                                <a className={styles.titleLink}>
+                                    <span className={styles.titleFull}>
+                                        {siteName}
+                                    </span>
+                                    <span className={styles.titleShort}>
+                                        {shortSiteName}
+                                    </span>
+                                </a>
                             </Link>
                         </div>
                         {mostRecentDay && (

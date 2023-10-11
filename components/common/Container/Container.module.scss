@@ -28,3 +28,17 @@
 .titleLink {
     color: var(--color-not-black);
 }
+
+.titleFull {
+    display: none;
+
+    @include breakpoint('xsmall') {
+        display: block;
+    }
+}
+
+.titleShort {
+    @include breakpoint('xsmall') {
+        display: none;
+    }
+}
