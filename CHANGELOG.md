@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.17.7](https://github.com/snapszhot/snapszhot/compare/v1.17.6...v1.17.7)
+## [v1.17.8](https://github.com/snapszhot/snapszhot/compare/v1.17.7...v1.17.8)
+
+-   Bump dependencies [`3ab6ad7`](https://github.com/snapszhot/snapszhot/commit/3ab6ad7ed8aab047c86fb768897ba6366140cfe2)
+-   Show short name for small devices [`8e6870c`](https://github.com/snapszhot/snapszhot/commit/8e6870cf4e7b9931a8cda48b645e7202c8fb57d0)
+-   Fix full width images [`92ad8e7`](https://github.com/snapszhot/snapszhot/commit/92ad8e7cade62b30cc6501cdc8d3a09d364868fb)
+
+## [v1.17.7](https://github.com/snapszhot/snapszhot/compare/v1.17.6...v1.17.7) (10 October 2023)
 
 -   Bump dependencies [`5c9a19a`](https://github.com/snapszhot/snapszhot/commit/5c9a19a6902b18116d3762ce97a8d954e6285c17)
 -   Set fixed image height [`6880d29`](https://github.com/snapszhot/snapszhot/commit/6880d29c51765704b29be7f3266f9f990a73d662)
