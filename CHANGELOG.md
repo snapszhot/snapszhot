@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.17.8](https://github.com/snapszhot/snapszhot/compare/v1.17.7...v1.17.8)
+## [v1.17.9](https://github.com/snapszhot/snapszhot/compare/v1.17.8...v1.17.9)
+
+-   Bump dependencies [`cb4f3d5`](https://github.com/snapszhot/snapszhot/commit/cb4f3d5bdcf381a9266327604fc5b4fd184fa3bf)
+-   Add placeholder svg [`edfeab6`](https://github.com/snapszhot/snapszhot/commit/edfeab683b996889410779df201f8b232e94ba85)
+
+## [v1.17.8](https://github.com/snapszhot/snapszhot/compare/v1.17.7...v1.17.8) (11 October 2023)
 
 -   Bump dependencies [`3ab6ad7`](https://github.com/snapszhot/snapszhot/commit/3ab6ad7ed8aab047c86fb768897ba6366140cfe2)
 -   Show short name for small devices [`8e6870c`](https://github.com/snapszhot/snapszhot/commit/8e6870cf4e7b9931a8cda48b645e7202c8fb57d0)
