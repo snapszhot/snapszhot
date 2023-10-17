@@ -10,9 +10,9 @@
         "release": "dotenv -e .env.local release-it"
     },
     "dependencies": {
-        "@prismicio/client": "^7.3.0",
-        "@sentry/nextjs": "^7.73.0",
-        "@supabase/supabase-js": "^2.38.0",
+        "@prismicio/client": "^7.3.1",
+        "@sentry/nextjs": "^7.74.1",
+        "@supabase/supabase-js": "^2.38.1",
         "axios": "^1.5.1",
         "classnames": "^2.3.2",
         "formik": "^2.4.5",
@@ -32,7 +32,7 @@
         "eslint": "^8.51.0",
         "eslint-config-next": "^12.3.4",
         "eslint-config-prettier": "^9.0.0",
-        "sass": "^1.69.2"
+        "sass": "^1.69.3"
     },
     "release-it": {
         "git": {
