@@ -1,5 +1,8 @@
 import supabase from '@lib/supabase-client'
 
+const moveToFront = (array, condition) =>
+    array.sort((a, b) => condition(b) - condition(a))
+
 export default async function handler(req, res) {
     const { query } = req.query
     const cleanQuery =
@@ -26,6 +29,19 @@ export default async function handler(req, res) {
             id: item.id,
         }
     })
+
+    if (cleanQuery.toLowerCase().includes('yi+yi:*')) {
+        moveToFront(formattedData, item => {
+            if (
+                item.director === 'Edward Yang' &&
+                item.originalTitlePhonetic === 'Yi yi'
+            ) {
+                return 1
+            }
+
+            return 0
+        })
+    }
 
     res.status(200).json(formattedData)
 }
