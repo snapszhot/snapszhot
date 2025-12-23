@@ -1,44 +1,44 @@
-@import 'mixins';
+@use "mixins";
 
 .container {
-    width: 100%;
+  width: 100%;
 }
 
 .previewBanner {
-    background-color: #c11;
-    color: var(--color-white);
-    padding: var(--spacing-half);
-    text-align: center;
+  background-color: #c11;
+  color: var(--color-white);
+  padding: var(--spacing-half);
+  text-align: center;
 
-    a {
-        color: var(--color-white);
-    }
+  a {
+    color: var(--color-white);
+  }
 }
 
 .pageTitleWrapper {
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
 }
 
 .pageTitle {
-    font-weight: var(--font-weight-sans-bold);
-    text-decoration: underline;
+  font-weight: var(--font-weight-sans-bold);
+  text-decoration: underline;
 }
 
 .titleLink {
-    color: var(--color-not-black);
+  color: var(--color-not-black);
 }
 
 .titleFull {
-    display: none;
+  display: none;
 
-    @include breakpoint('xsmall') {
-        display: block;
-    }
+  @include mixins.breakpoint("xsmall") {
+    display: block;
+  }
 }
 
 .titleShort {
-    @include breakpoint('xsmall') {
-        display: none;
-    }
+  @include mixins.breakpoint("xsmall") {
+    display: none;
+  }
 }
