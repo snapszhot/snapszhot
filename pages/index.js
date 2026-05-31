@@ -1,5 +1,5 @@
 import { captureException } from '@sentry/nextjs'
-import { getSingleMovie } from '@lib/prismic'
+import { getMostRecentMovie } from '@lib/prismic'
 
 import { Game } from '@components/views'
 
@@ -9,7 +9,7 @@ export default function HomePage({ ...props }) {
 
 export async function getStaticProps({ preview = false }) {
     try {
-        const post = await getSingleMovie()
+        const post = await getMostRecentMovie()
 
         return {
             props: {
@@ -17,8 +17,8 @@ export async function getStaticProps({ preview = false }) {
                 canonical: 'https://snapgame.cc',
                 mostRecentDay: post.day,
                 ogImage: post.images[0].image.url,
-                preview,
-            },
+                preview
+            }
         }
     } catch (error) {
         captureException(error)

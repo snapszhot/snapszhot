@@ -1,7 +1,7 @@
 import { captureException } from '@sentry/nextjs'
 
 import groupByTens from '@lib/group-by-tens'
-import { getAllMovies, getSingleMovie } from '@lib/prismic'
+import { getAllMovies, getMostRecentMovie } from '@lib/prismic'
 
 import { Archive } from '@components/views'
 
@@ -13,7 +13,7 @@ export async function getStaticProps({ preview = false, previewData }) {
     try {
         const [rawPosts, mostRecentDay] = await Promise.all([
             getAllMovies(previewData),
-            getSingleMovie(previewData),
+            getMostRecentMovie(previewData)
         ])
         const posts = groupByTens(rawPosts)
 
@@ -23,9 +23,9 @@ export async function getStaticProps({ preview = false, previewData }) {
                 posts,
                 mostRecentDay: mostRecentDay.day,
                 pageTitle: 'Archive',
-                preview,
+                preview
             },
-            revalidate: 60,
+            revalidate: 60
         }
     } catch (error) {
         captureException(error)
