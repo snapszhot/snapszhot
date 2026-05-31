@@ -9,5 +9,5 @@ export default function Stats({ styles }) {
 }
 
 Stats.propTypes = {
-    styles: PropTypes.string,
+    styles: PropTypes.string
 }

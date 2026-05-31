@@ -9,5 +9,5 @@ export default function Previous({ styles }) {
 }
 
 Previous.propTypes = {
-    styles: PropTypes.string,
+    styles: PropTypes.string
 }

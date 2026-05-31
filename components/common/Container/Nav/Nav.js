@@ -11,7 +11,7 @@ import {
     Previous,
     Random,
     Settings as SettingsIcon,
-    Stats as StatsIcon,
+    Stats as StatsIcon
 } from '@components/icons'
 import Info from '../Info'
 import Settings from '../Settings'
@@ -76,5 +76,5 @@ export default function Nav({ day, mostRecentDay }) {
 
 Nav.propTypes = {
     day: PropTypes.number,
-    mostRecentDay: PropTypes.number,
+    mostRecentDay: PropTypes.number
 }

@@ -11,15 +11,15 @@ export default function Modal({
     isOpen,
     scrollable = false,
     title,
-    toggleModal,
+    toggleModal
 }) {
     const modalStyles = {
         overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.25)',
-        },
+            backgroundColor: 'rgba(0, 0, 0, 0.25)'
+        }
     }
     const className = cn(styles.modal, {
-        [styles.scrollable]: scrollable,
+        [styles.scrollable]: scrollable
     })
 
     return (
@@ -46,5 +46,5 @@ Modal.propTypes = {
     isOpen: PropTypes.bool,
     scrollable: PropTypes.bool,
     toggleModal: PropTypes.func,
-    title: PropTypes.string,
+    title: PropTypes.string
 }

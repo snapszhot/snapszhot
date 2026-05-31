@@ -33,5 +33,5 @@ export default function Archive({ posts, ...props }) {
 }
 
 Archive.propTypes = {
-    posts: PropTypes.array,
+    posts: PropTypes.array
 }

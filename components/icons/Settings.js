@@ -9,5 +9,5 @@ export default function Settings({ styles }) {
 }
 
 Settings.propTypes = {
-    styles: PropTypes.string,
+    styles: PropTypes.string
 }

@@ -21,5 +21,5 @@ export default function Game({ day, subtitle }) {
 
 Game.propTypes = {
     day: PropTypes.number,
-    subtitle: PropTypes.string,
+    subtitle: PropTypes.string
 }

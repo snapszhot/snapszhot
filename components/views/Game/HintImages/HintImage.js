@@ -26,7 +26,7 @@ export default function HintImage({ dimensions, index, url }) {
                                 opacity: 1,
                                 border: 0,
                                 margin: 0,
-                                padding: 0,
+                                padding: 0
                             }}
                             alt=''
                             aria-hidden={true}
@@ -51,5 +51,5 @@ export default function HintImage({ dimensions, index, url }) {
 HintImage.propTypes = {
     dimensions: PropTypes.object,
     index: PropTypes.number,
-    url: PropTypes.string,
+    url: PropTypes.string
 }

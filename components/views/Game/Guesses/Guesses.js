@@ -24,5 +24,5 @@ export default function Guesses({ day }) {
 }
 
 Guesses.propTypes = {
-    day: PropTypes.number,
+    day: PropTypes.number
 }

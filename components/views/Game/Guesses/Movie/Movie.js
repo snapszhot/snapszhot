@@ -9,7 +9,7 @@ export default function Movie({
     engTransTitle,
     originalTitle,
     originalTitlePhonetic,
-    releaseYear,
+    releaseYear
 }) {
     // These vars are in case you need to add "aka" and "or" in the future
     // const hasAlternateTitle = altLangTitle || engTransTitle || altEngTitle
@@ -55,5 +55,5 @@ Movie.propTypes = {
     engTransTitle: PropTypes.string,
     originalTitle: PropTypes.string,
     originalTitlePhonetic: PropTypes.string,
-    releaseYear: PropTypes.string,
+    releaseYear: PropTypes.string
 }

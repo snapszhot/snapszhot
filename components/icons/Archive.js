@@ -9,5 +9,5 @@ export default function Archive({ styles }) {
 }
 
 Archive.propTypes = {
-    styles: PropTypes.string,
+    styles: PropTypes.string
 }

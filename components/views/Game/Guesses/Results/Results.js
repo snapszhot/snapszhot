@@ -69,5 +69,5 @@ export default function Results({ day }) {
 }
 
 Results.propTypes = {
-    day: PropTypes.number,
+    day: PropTypes.number
 }

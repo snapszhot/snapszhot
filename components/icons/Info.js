@@ -31,5 +31,5 @@ export default function Info({ styles }) {
 }
 
 Info.propTypes = {
-    styles: PropTypes.string,
+    styles: PropTypes.string
 }

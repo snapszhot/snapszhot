@@ -15,5 +15,5 @@ export default function NavModalTrigger({ children, onClick, title }) {
 NavModalTrigger.propTypes = {
     children: PropTypes.node,
     onClick: PropTypes.func,
-    title: PropTypes.string,
+    title: PropTypes.string
 }

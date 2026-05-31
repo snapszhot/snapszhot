@@ -25,7 +25,7 @@ SettingToggle.propTypes = {
     disabled: PropTypes.bool,
     id: PropTypes.string,
     label: PropTypes.string,
-    onChange: PropTypes.func,
+    onChange: PropTypes.func
 }
 
 export default function Settings({ isOpen, toggleModal }) {
@@ -40,7 +40,7 @@ export default function Settings({ isOpen, toggleModal }) {
                 onChange={() =>
                     setEnabledHints({
                         ...enabledHints,
-                        director: !enabledHints.director,
+                        director: !enabledHints.director
                     })
                 }
             />
@@ -51,7 +51,7 @@ export default function Settings({ isOpen, toggleModal }) {
                 onChange={() =>
                     setEnabledHints({
                         ...enabledHints,
-                        year: !enabledHints.year,
+                        year: !enabledHints.year
                     })
                 }
             />
@@ -62,7 +62,7 @@ export default function Settings({ isOpen, toggleModal }) {
                 onChange={() =>
                     setEnabledHints({
                         ...enabledHints,
-                        subtitles: !enabledHints.subtitles,
+                        subtitles: !enabledHints.subtitles
                     })
                 }
             />
@@ -72,5 +72,5 @@ export default function Settings({ isOpen, toggleModal }) {
 
 Settings.propTypes = {
     isOpen: PropTypes.bool,
-    toggleModal: PropTypes.func,
+    toggleModal: PropTypes.func
 }

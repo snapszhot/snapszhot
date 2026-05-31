@@ -8,7 +8,7 @@ export default function StepListItem({ imageNumber }) {
     const handleClick = () => setCurrentImage(imageNumber)
 
     const className = cn(styles.item, {
-        [styles.selected]: currentImage === imageNumber,
+        [styles.selected]: currentImage === imageNumber
     })
 
     return (
@@ -19,5 +19,5 @@ export default function StepListItem({ imageNumber }) {
 }
 
 StepListItem.propTypes = {
-    imageNumber: PropTypes.number,
+    imageNumber: PropTypes.number
 }

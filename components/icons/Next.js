@@ -9,5 +9,5 @@ export default function Next({ styles }) {
 }
 
 Next.propTypes = {
-    styles: PropTypes.string,
+    styles: PropTypes.string
 }

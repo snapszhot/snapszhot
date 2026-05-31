@@ -29,7 +29,7 @@ const CustomErrorComponent = props => {
 }
 
 CustomErrorComponent.propTypes = {
-    statusCode: PropTypes.number,
+    statusCode: PropTypes.number
 }
 
 CustomErrorComponent.getInitialProps = async contextData => {

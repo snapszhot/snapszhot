@@ -1,56 +1,66 @@
 {
-  "name": "snapswot",
-  "version": "1.17.9",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "check": "npx tsc --noEmit",
-    "release": "dotenv -e .env.local release-it"
-  },
-  "dependencies": {
-    "@prismicio/client": "^7.21.8",
-    "@sentry/nextjs": "^10.53.1",
-    "@supabase/supabase-js": "^2.105.4",
-    "axios": "^1.16.1",
-    "classnames": "^2.5.1",
-    "formik": "^2.4.9",
-    "image-size": "^1.2.1",
-    "lodash.debounce": "^4.0.8",
-    "luxon": "^3.7.2",
-    "next": "^15.5.18",
-    "next-seo": "^5.15.0",
-    "prop-types": "^15.8.1",
-    "react": "^19.2.6",
-    "react-countdown": "^2.3.6",
-    "react-dom": "^19.2.6",
-    "react-modal": "^3.16.3"
-  },
-  "devDependencies": {
-    "dotenv-cli": "^11.0.0",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^15.5.18",
-    "eslint-config-prettier": "^9.1.2",
-    "sass": "^1.99.0"
-  },
-  "release-it": {
-    "git": {
-      "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs",
-      "commitMessage": "Releasing v${version}",
-      "tagName": "v${version}"
+    "name": "snapswot",
+    "version": "1.17.9",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "format": "prettier --write \"**/*.{ts,tsx,js,json,css}\"",
+        "lint": "next lint",
+        "check": "npx tsc --noEmit",
+        "release": "dotenv -e .env.local release-it"
     },
-    "github": {
-      "release": true,
-      "releaseName": "v${version}",
-      "tokenRef": "GITHUB_TOKEN"
+    "dependencies": {
+        "@prismicio/client": "^7.21.8",
+        "@sentry/nextjs": "^10.53.1",
+        "@supabase/supabase-js": "^2.105.4",
+        "axios": "^1.16.1",
+        "classnames": "^2.5.1",
+        "formik": "^2.4.9",
+        "image-size": "^1.2.1",
+        "lodash.debounce": "^4.0.8",
+        "luxon": "^3.7.2",
+        "next": "^15.5.18",
+        "next-seo": "^5.15.0",
+        "prop-types": "^15.8.1",
+        "react": "^19.2.6",
+        "react-countdown": "^2.3.6",
+        "react-dom": "^19.2.6",
+        "react-modal": "^3.16.3"
     },
-    "hooks": {
-      "after:bump": "npx auto-changelog -p --template changelog-template.hbs --ignore-commit-pattern \"^(Releasing v.*)\""
+    "devDependencies": {
+        "dotenv-cli": "^11.0.0",
+        "eslint": "^8.57.1",
+        "eslint-config-next": "^15.5.18",
+        "eslint-config-prettier": "^9.1.2",
+        "prettier": "^3.8.3",
+        "sass": "^1.99.0"
     },
-    "npm": {
-      "publish": false
+    "prettier": {
+        "arrowParens": "avoid",
+        "jsxSingleQuote": true,
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "none"
+    },
+    "release-it": {
+        "git": {
+            "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs",
+            "commitMessage": "Releasing v${version}",
+            "tagName": "v${version}"
+        },
+        "github": {
+            "release": true,
+            "releaseName": "v${version}",
+            "tokenRef": "GITHUB_TOKEN"
+        },
+        "hooks": {
+            "after:bump": "npx auto-changelog -p --template changelog-template.hbs --ignore-commit-pattern \"^(Releasing v.*)\""
+        },
+        "npm": {
+            "publish": false
+        }
     }
-  }
 }

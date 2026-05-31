@@ -12,7 +12,7 @@ function GuessGridItem({ amount, gamesPlayed, guess }) {
             <span
                 className={styles.gridItemSpan}
                 style={{
-                    width: `calc(${percentage}% - ${offset}px)`,
+                    width: `calc(${percentage}% - ${offset}px)`
                 }}
             >
                 {amount}
@@ -24,7 +24,7 @@ function GuessGridItem({ amount, gamesPlayed, guess }) {
 GuessGridItem.propTypes = {
     amount: PropTypes.number,
     gamesPlayed: PropTypes.number,
-    guess: PropTypes.number,
+    guess: PropTypes.number
 }
 
 export default function GuessGrid({ gamesPlayed, guesses }) {
@@ -47,5 +47,5 @@ export default function GuessGrid({ gamesPlayed, guesses }) {
 
 GuessGrid.propTypes = {
     gamesPlayed: PropTypes.number,
-    guesses: PropTypes.array,
+    guesses: PropTypes.array
 }

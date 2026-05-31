@@ -12,5 +12,5 @@ export default function StatItem({ number, title }) {
 
 StatItem.propTypes = {
     number: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    title: PropTypes.string,
+    title: PropTypes.string
 }

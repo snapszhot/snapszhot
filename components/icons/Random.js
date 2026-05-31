@@ -9,5 +9,5 @@ export default function Random({ styles }) {
 }
 
 Random.propTypes = {
-    styles: PropTypes.string,
+    styles: PropTypes.string
 }

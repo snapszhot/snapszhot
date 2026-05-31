@@ -17,7 +17,7 @@ export default function GuessForm() {
         setCurrentImage,
         setGameState,
         setGuesses,
-        setStats,
+        setStats
     } = useGuessContext()
     const [error, setError] = useState(false)
 
@@ -29,7 +29,7 @@ export default function GuessForm() {
         engTransTitle: '',
         guess: '',
         originalTitlePhonetic: '',
-        releaseYear: '',
+        releaseYear: ''
     }
 
     const handleSubmit = (values, { resetForm }) => {
@@ -49,13 +49,13 @@ export default function GuessForm() {
         if (playerWon || playerLost) {
             setStats({
                 playerWon,
-                todaysGuesses: numberOfGuesses,
+                todaysGuesses: numberOfGuesses
             })
             axios
                 .post('/api/game-stats', {
                     puzzle_id: day,
                     won: playerWon,
-                    frame_won: numberOfGuesses,
+                    frame_won: numberOfGuesses
                 })
                 .catch(err => {
                     captureException(err)
@@ -80,8 +80,8 @@ export default function GuessForm() {
             {
                 ...values,
                 isCorrect: playerWon,
-                originalTitle: values.guess,
-            },
+                originalTitle: values.guess
+            }
         ])
         setCurrentGuess(numberOfGuesses)
         resetForm()

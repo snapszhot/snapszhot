@@ -45,5 +45,5 @@ export default function Settings({ isOpen, toggleModal }) {
 
 Settings.propTypes = {
     isOpen: PropTypes.bool,
-    toggleModal: PropTypes.func,
+    toggleModal: PropTypes.func
 }

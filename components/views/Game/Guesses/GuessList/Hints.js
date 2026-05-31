@@ -21,5 +21,5 @@ export default function Hints({ showDirectorHints, showYearHints, yearRange }) {
 Hints.propTypes = {
     showDirectorHints: PropTypes.bool,
     showYearHints: PropTypes.bool,
-    yearRange: PropTypes.number,
+    yearRange: PropTypes.number
 }

@@ -1,14 +1,14 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { CenteredWrapper, Container } from "@components/common";
+import { CenteredWrapper, Container } from '@components/common'
 
 export default function Custom500() {
-  return (
-    <Container pageTitle="500! Error Loading Page!">
-      <CenteredWrapper padding="0 var(--spacing-single) var(--spacing-triple)">
-        There was an error loading this page. Why not{" "}
-        <Link href="/archive">view the archive instead</Link>?
-      </CenteredWrapper>
-    </Container>
-  );
+    return (
+        <Container pageTitle='500! Error Loading Page!'>
+            <CenteredWrapper padding='0 var(--spacing-single) var(--spacing-triple)'>
+                There was an error loading this page. Why not{' '}
+                <Link href='/archive'>view the archive instead</Link>?
+            </CenteredWrapper>
+        </Container>
+    )
 }

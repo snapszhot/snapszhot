@@ -1,27 +1,27 @@
-import PropTypes from "prop-types";
-import Link from "next/link";
-import getRandomLink from "@lib/get-random-link";
-import { GuessContextProvider } from "@lib/use-guess-context";
-import useHasMounted from "@lib/use-has-mounted";
+import PropTypes from 'prop-types'
+import Link from 'next/link'
+import getRandomLink from '@lib/get-random-link'
+import { GuessContextProvider } from '@lib/use-guess-context'
+import useHasMounted from '@lib/use-has-mounted'
 
-import { CenteredWrapper, Container } from "@components/common";
+import { CenteredWrapper, Container } from '@components/common'
 
 export default function FourOhFour({ mostRecentDay, ...props }) {
-  const hasMounted = useHasMounted();
-  const randomLink = getRandomLink({ hasMounted, mostRecentDay });
+    const hasMounted = useHasMounted()
+    const randomLink = getRandomLink({ hasMounted, mostRecentDay })
 
-  return (
-    <GuessContextProvider>
-      <Container mostRecentDay={mostRecentDay} {...props}>
-        <CenteredWrapper padding="0 var(--spacing-single) var(--spacing-triple)">
-          This page cannot be found. Why not{" "}
-          <Link href={randomLink}>play a random day’s puzzle</Link>?
-        </CenteredWrapper>
-      </Container>
-    </GuessContextProvider>
-  );
+    return (
+        <GuessContextProvider>
+            <Container mostRecentDay={mostRecentDay} {...props}>
+                <CenteredWrapper padding='0 var(--spacing-single) var(--spacing-triple)'>
+                    This page cannot be found. Why not{' '}
+                    <Link href={randomLink}>play a random day’s puzzle</Link>?
+                </CenteredWrapper>
+            </Container>
+        </GuessContextProvider>
+    )
 }
 
 FourOhFour.propTypes = {
-  mostRecentDay: PropTypes.number,
-};
+    mostRecentDay: PropTypes.number
+}

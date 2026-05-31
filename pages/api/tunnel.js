@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         const endpoint = `https://${sentryHost}/api/${projectId}/envelope/`
         const response = await fetch(endpoint, {
             method: 'POST',
-            body: envelope,
+            body: envelope
         })
 
         const json = response.json()

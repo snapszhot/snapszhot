@@ -20,5 +20,5 @@ export default function PrefillItem({ handleClick, item }) {
 
 PrefillItem.propTypes = {
     handleClick: PropTypes.func,
-    item: PropTypes.object,
+    item: PropTypes.object
 }

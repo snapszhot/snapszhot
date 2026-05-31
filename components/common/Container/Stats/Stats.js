@@ -43,5 +43,5 @@ export default function Stats({ isOpen, toggleModal }) {
 
 Stats.propTypes = {
     isOpen: PropTypes.bool,
-    toggleModal: PropTypes.func,
+    toggleModal: PropTypes.func
 }

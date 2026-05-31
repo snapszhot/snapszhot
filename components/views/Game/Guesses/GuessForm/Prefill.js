@@ -34,5 +34,5 @@ export default function Prefill({ handlePrefillSelect, options, showPrefill }) {
 Prefill.propTypes = {
     handlePrefillSelect: PropTypes.func,
     options: PropTypes.array,
-    showPrefill: PropTypes.bool,
+    showPrefill: PropTypes.bool
 }

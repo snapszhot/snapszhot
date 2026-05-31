@@ -19,7 +19,7 @@ export default function InputField({ name, setError }) {
     const [field] = useField({
         id: name,
         name: name,
-        type: 'text',
+        type: 'text'
     })
 
     const searchAPI = async query => {
@@ -27,7 +27,7 @@ export default function InputField({ name, setError }) {
             const { data } = await axios({
                 url: '/api/search',
                 method: 'GET',
-                params: { query },
+                params: { query }
             })
 
             setOptions(data)
@@ -54,7 +54,7 @@ export default function InputField({ name, setError }) {
             engTransTitle: '',
             guess: value,
             originalTitlePhonetic: '',
-            releaseYear: '',
+            releaseYear: ''
         })
         setShowPrefill(hasValue)
 
@@ -84,7 +84,7 @@ export default function InputField({ name, setError }) {
             engTransTitle: item.engTransTitle,
             guess: item.originalTitle,
             originalTitlePhonetic: item.originalTitlePhonetic,
-            releaseYear: item.releaseYear,
+            releaseYear: item.releaseYear
         })
         setShowPrefill(false)
     }
@@ -117,5 +117,5 @@ export default function InputField({ name, setError }) {
 InputField.propTypes = {
     name: PropTypes.string,
     options: PropTypes.array,
-    setError: PropTypes.func,
+    setError: PropTypes.func
 }

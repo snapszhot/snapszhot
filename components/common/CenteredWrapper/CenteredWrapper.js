@@ -11,5 +11,5 @@ export default function CenteredWrapper({ children, padding }) {
 
 CenteredWrapper.propTypes = {
     children: PropTypes.node,
-    padding: PropTypes.string,
+    padding: PropTypes.string
 }

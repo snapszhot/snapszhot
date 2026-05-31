@@ -30,5 +30,5 @@ Game.propTypes = {
     day: PropTypes.number,
     images: PropTypes.array,
     preview: PropTypes.bool,
-    subtitle: PropTypes.string,
+    subtitle: PropTypes.string
 }

@@ -9,7 +9,7 @@ export default async function handler(req, res) {
         query.trim() !== '' ? `${query.trim().replace(/ /g, '+')}:*` : ''
 
     const { data, error } = await supabase.rpc('snapszhot_search', {
-        query: cleanQuery,
+        query: cleanQuery
     })
 
     if (error) {
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
             altEngTitle: item.alt_eng_title,
             director: item.director,
             releaseYear: item.year,
-            id: item.id,
+            id: item.id
         }
     })
 

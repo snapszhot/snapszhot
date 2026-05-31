@@ -16,7 +16,7 @@ export default async function preview(req, res) {
     prismicClient.enableAutoPreviewsFromReq(req)
     const url = await prismicClient.resolvePreviewURL({
         linkResolver,
-        defaultURL: '/',
+        defaultURL: '/'
     })
 
     if (!url) {
@@ -25,7 +25,7 @@ export default async function preview(req, res) {
 
     // Enable Preview Mode by setting the cookies
     res.setPreviewData({
-        ref, // pass the ref to pages so that they can fetch the draft ref
+        ref // pass the ref to pages so that they can fetch the draft ref
     })
 
     // Redirect the user to the share endpoint from same origin. This is

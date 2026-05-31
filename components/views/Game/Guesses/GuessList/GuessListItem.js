@@ -38,7 +38,7 @@ export default function GuessListItem({ guess }) {
 
     const containerStyles = cn(styles.container, {
         [styles.isYellow]: showHints,
-        [styles.isGreen]: guess.isCorrect,
+        [styles.isGreen]: guess.isCorrect
     })
 
     return (
@@ -69,5 +69,5 @@ export default function GuessListItem({ guess }) {
 }
 
 GuessListItem.propTypes = {
-    guess: PropTypes.object,
+    guess: PropTypes.object
 }

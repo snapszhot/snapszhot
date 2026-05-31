@@ -13,5 +13,5 @@ export default function HintImages({ images }) {
 }
 
 HintImages.propTypes = {
-    images: PropTypes.array,
+    images: PropTypes.array
 }

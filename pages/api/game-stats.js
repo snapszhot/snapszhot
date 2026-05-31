@@ -12,8 +12,8 @@ export default async function handler(req, res) {
             {
                 puzzle_id,
                 won,
-                frame_won,
-            },
+                frame_won
+            }
         ])
 
         if (error) {
